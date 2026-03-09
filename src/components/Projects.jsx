@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Badge, Button } from "react-bootstrap";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import todo from "../assets/todo.png";  
-import weather from "../assets/weather.png";
-import login from "../assets/login.png";
+// import todo from "../assets/todo.png";  
+// import weather from "../assets/weather.png";
+// import login from "../assets/login.png";
 
 const Projects = () => {
   const projects = [

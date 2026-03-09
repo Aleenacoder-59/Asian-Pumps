@@ -4,53 +4,43 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const Footer = () => {
-    
+return (
+<footer
+className="py-4 footer"
 
-    return (
-        <footer 
-            className="text-white py-3 "
-            style={{ 
-                backgroundColor: '#1e2f3aff' 
-            }}
-        >
-            <Container fluid>
-                <Row className="text-center text-md-start align-items-center">
-                  
-                    <Col xs={12} md={4} className="mb-3 mb-md-0">
-                        <div className="d-flex justify-content-center justify-content-md-start align-items-center">
-                            
-                            <span 
-                                className=" rounded-3  p-1 me-2" 
-                                style={{ 
-                                    backgroundColor: '#33c4c4ff', 
-                                    border: ' 2px solid #33c4c4ff'
-                                }}
-                            >
-                                <i className="bi bi-code-slash text-white"></i>
-                            </span>
-                            <span className="fw-bold" style={{ color: '#ffffffff' }}>
-                                Aleena_codes
-                            </span>
-                        </div>
-                    </Col>
+>
+<Container fluid className="px-lg-5">
+<Row className="align-items-center">
 
-                   
-                    <Col xs={12} md={4} className="mb-3 mb-md-0">
-                        <p className="text-center mb-0" style={{ color: '#E0D8D6' }}>
-  <i className="bi bi-lightbulb-fill me-1" style={{ color: '#fff349ff' }}></i> Innovatively designed & developed by Aleena.
-</p>
-                    </Col>
-                    
-                    
-                    <Col xs={12} md={4} className="text-center text-md-end">
-                        <p className="mb-0" style={{ color: '#E0D8D6' }}>
-                            &copy; 2025 Aleena_codes. All rights reserved.
-                        </p>
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
-    );
+                <Col xs={12} md={4} className="text-center text-md-start mb-3 mb-md-0">
+                    <img
+                        src="/Asian-pumps-logo.png"
+                        alt="Asian Pumps"
+                        style={{ height: '45px', width: 'auto' }}
+                    />
+                </Col>
+
+                {/* MIDDLE: Copyright */}
+                <Col xs={12} md={4} className="text-center mb-3 mb-md-0">
+                    <p className="mb-0 text-muted" >
+                        &copy; {new Date().getFullYear()} <strong>Asian Pumps</strong>. All rights reserved.
+                    </p>
+                </Col>
+
+              
+                <Col xs={12} md={4} className="text-center text-md-end">
+                    <p className="mb-0 text-muted small" style={{ fontSize: '0.8rem' }}>
+                        Designed and Developed by 
+                        <span className="fw-bold ms-1" style={{ color: '#33c4c4' }}>
+                            Aleena_codes
+                        </span>
+                    </p>
+                </Col>
+
+            </Row>
+        </Container>
+    </footer>
+);
 };
 
 export default Footer;

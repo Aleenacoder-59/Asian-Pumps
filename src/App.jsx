@@ -3,19 +3,24 @@ import './App.css';
 import HeaderWrapper from './components/Headerwrapper.jsx'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './components/About.jsx';
-import Skill from './components/Skill.jsx';
+import Clients from './components/Clients.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
-import Footer from './components/Footer.jsx';
 
+import Footer from './components/Footer.jsx';
+import Product from './components/Products.jsx';
+import Support from './components/Support.jsx';
+import Collaboration from './components/Collaboration.jsx';
 function App() {
   return (
     <div className="App">
       <HeaderWrapper /> 
       <About/>
-      <Skill/>
-      <Projects/>
-      <Contact/>
+<Product/>
+<Support/>
+<Collaboration/>
+      <Clients/>
+      <Contact/> 
       <Footer/>
     </div>
   );

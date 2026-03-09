@@ -1,89 +1,86 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Carousel from "react-bootstrap/Carousel";
 
 const Hero = () => {
-    return (
-        <section
-            className="d-flex align-items-start justify-content-center text-center text-white vh-100 position-relative"
-        >
-            <div className='position-absolute top-0 start-0 w-100 h-100'
-                style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}
-            ></div>
-            <Container className="position-relative z-1">
-                <Row className="justify-content-center">
-                    <Col xs={12} md={10} lg={8} className="pt-5">
-                        
-                        <div
-                            className="d-inline-block mb-4 mt-4 px-3 py-2 rounded-4 bg-dark bg-opacity-50  shadow"
-                            style={{
-                                fontFamily: 'Fira Mono, Menlo, Monaco, Consolas, monospace',
-                                letterSpacing: '0.5px',
-                                backdropFilter: 'blur(4px)' 
-                            }}
-                        >
-                            <span style={{ color: '#7639d8ff' }}>const</span>{' '}
-                            <span style={{ color: '#ffffffff' }}>developer</span>{' '}
-                            <span style={{ color: '#46b5d6ff' }}>=</span>{' '}
-                            <span style={{ color: '	#33c4c4ff' }}>"Aleena_codes"</span>
-                            <span style={{ color: '#fff' }}>;</span>
-                        </div>
-                         
-                        <h1 className=' hero-slide-down display-3 fw-bold mb-3 ' style={{ animationDelay: '0.2s' }} >
-                            Frontend
-                            <span style={{ color: '	#33c4c4ff' }}> React.js </span> Developer
-                        </h1>
-                        <p className="   text-secondary fw-bold hero-slide-down  lead fs-4 mb-4" style={{ animationDelay: '0.5s' }}>
-                            Crafting beautiful, performant web experiences with 1 year of expertise in <span className="fw-bold" style={{ color: '#33c4c4ff' }}>React.js</span> and modern web technologies.
-                        </p>
-<div className="hero-buttons" >
-<div className="hero-slide-up" style={{ animationDelay: '0.8s' }}>
-  <a
-    className="hero-button m-3"
-    href="/Resume_Aleena_Atiq.pdf"
-    download
-  >
-    <i className="bi bi-download me-2"></i>
-    Download Resume
-  </a>
-</div>
+  return (
+    <section className="hero-section">
+      
+      <div className="hero-overlay"></div>
 
-<div className="hero-slide-up" style={{ animationDelay: '1s' }}>
-  <a
-    className="hero-button"
-    href="https://github.com/Aleenacoder-59?tab=repositories"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="bi bi-github"></i>
-    View Projects
-  </a>
-</div>
-</div>
-<div className="d-flex flex-wrap justify-content-center gap-2 mt-4">
-  <span className="border border-secondary px-3 py-2 text-white " style={{ transition: "transform 0.2s ease" }}
-    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}>React.js</span>
-  <span className="border border-secondary px-3 py-2 text-white " style={{ transition: "transform 0.2s ease" }}
-    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}>JavaScript</span>
-  <span className="border border-secondary px-3 py-2 text-white" style={{ transition: "transform 0.2s ease" }}
-    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}>Bootstrap CSS</span>
-  <span className="border border-secondary px-3 py-2 text-white" style={{ transition: "transform 0.2s ease" }}
-    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}>Tailwind CSS</span>
-  <span className="border border-secondary px-3 py-2 text-white" style={{ transition: "transform 0.2s ease" }}
-    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}>Github</span>
-</div>
-                    
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-    );
+      <Container className="hero-content">
+       
+        <Row className="align-items-center d-flex flex-column flex-md-row">
+
+        
+          <Col xs={12} md={6} className="hero-right order-1 order-md-2 mb-4 mb-md-0">
+            <Carousel fade controls={false} indicators={false} interval={3000}>
+              <Carousel.Item>
+                <img
+                  src="/hassan.jpg"
+                  alt="Owner"
+                  className="hero-image d-block w-100 rounded shadow-lg"
+                />
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  src="/china.jpg"
+                  alt="Collaboration with Chinease vendors"
+                  className="hero-image d-block w-100 rounded shadow-lg"
+                />
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  src="/Solar system.jpg"
+                  alt="Solar Plates"
+                  className="hero-image d-block w-100 rounded shadow-lg"
+                />
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  src="/pumps.jpg"
+                  alt="Water Pumps"
+                  className="hero-image d-block w-100 rounded shadow-lg"
+                />
+              </Carousel.Item>
+            </Carousel>
+          </Col>
+
+          <Col xs={12} md={6} className="hero-left text-start order-2 order-md-1">
+            <h1 className="hero-title fw-bold">
+              
+<span style={{ color: '#0b4a99' }}>Asian</span>{" "}
+<span style={{ color: '#71ca28' }}>Pumps</span>
+            </h1>
+            
+            <h2 className="text-black h5 mt-2"> 
+              Leading Water Pumping & Engineering Solutions 
+            </h2>
+
+            <p className="hero-description text-black">
+              Delivering innovative and high-quality water pumping solutions
+              across Pakistan since 1974. Serving industrial, commercial, and
+              residential sectors with precision and reliability.
+            </p>
+
+            <div className="hero-tags text-black">
+              <span>Industrial Pumps</span>
+              <span>Irrigation Systems</span>
+              <span>Water Engineering</span>
+              <span>Residential Solutions</span>
+                        <span>Centrifugal Pumps</span>
+              <span>Turbine Pumps</span>
+            </div>
+          </Col>
+
+        </Row>
+      </Container>
+    </section>
+  );
 };
 
 export default Hero;

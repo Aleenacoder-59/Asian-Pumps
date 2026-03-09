@@ -1,22 +1,15 @@
-import React from 'react';
-import MyNavbar from './Navbar.jsx';
-import Hero from './Hero.jsx';
-import bg from '../assets/bg.jpg'; 
+import React from "react";
+import MyNavbar from "./Navbar.jsx";
+import Hero from "./Hero.jsx";
+// import "./HeaderWrapper.css";
+
 
 const HeaderWrapper = () => {
   return (
-    <div 
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
+    <header className="site-header">
       <MyNavbar />
       <Hero />
-    </div>
+    </header>
   );
 };
 

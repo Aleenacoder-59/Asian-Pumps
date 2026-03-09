@@ -1,243 +1,123 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { FiSend } from 'react-icons/fi';
-import emailjs from '@emailjs/browser'; 
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaClock, FaGlobe, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [showAlert, setShowAlert] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    
-    const serviceID  = 'service_8vskc0e';   
-const templateID = 'template_jbp0av9';  
-const publicKey  = 'TtCOkqPZ0CljbE-kI'; 
-   
-
-    
-     emailjs.send(serviceID, templateID, {
-    from_name: formData.name,
-    from_email: formData.email,
-    subject: formData.subject,
-    message: formData.message,
-    to_email: 'aleenaatiq59@gmail.com' 
-}, publicKey)
-.then((response) => {
-    console.log('Email sent successfully!', response.status, response.text);
-    setShowAlert(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setTimeout(() => setShowAlert(false), 5000);
-})
-.catch((error) => {
-    console.error('Failed to send email:', error);
-    alert('Failed to send message. Please try again later.');
-})
-.finally(() => {
-    setIsSubmitting(false);
-});
-  };
-
   return (
-    <Container 
-      fluid 
-      id="contact" 
-      className="px-4 py-5 d-flex flex-column align-items-center justify-content-center" 
-      style={{
-        background: "linear-gradient(to right, #000000, #062145ff)",
-        minHeight: "100vh",
-      }}
-    >
-      
-      {showAlert && (
-        <Alert variant="success" className="position-fixed top-0 start-50 translate-middle-x mt-3 z-3">
-          Your message has been sent successfully!
-        </Alert>
-      )}
-      
-      
-      <Row className="justify-content-center mb-4 text-white w-100">
-        <Col xs={12} className="text-center">
-          <h1 className="text-white display-5 fw-bold mb-3">
-            Let's <span style={{ color: '#33c4c4' }}>Connect</span>
-          </h1>
-          <p className="text-white lead mb-0">
-            Bring your ideas to life. Let's connect to explore projects, partnerships, and professional opportunities.
-          </p>
-        </Col>
-      </Row>
-
-      
-      <Row className="w-100 justify-content-center mb-5 flex-md-nowrap">
+    <Container fluid id="contact" className="contact-section py-5 ">
+      <Container className="py-5">
         
-        <Col md={5} className="p-4 mb-4 mb-md-0 me-md-4">
-          <h4 className="text-white mb-3">Get in Touch</h4>
-          <p className="text-white-50 mb-4">
-            Excited to work on meaningful projects. Reach out to discuss ideas or potential collaborations.
-          </p>
+        <Row className="justify-content-center mb-5">
+          <Col lg={8} className="text-center">
+            <h6 className="text-uppercase fw-bold  mb-2" style={{ letterSpacing: '2px', color: '#0b4a99' }}>
+              Contact Information
+            </h6>
+            <h1 className="display-5 fw-bold text-dark mb-3">
+              Global Industrial  <span style={{color: '#2fd838'}}> Pump Solutions</span>
+            </h1>
+            <div className="collab-title-underline"></div>
+            <p className="lead text-muted mx-auto mt-3" style={{ maxWidth: '700px' }}>
+              Connect with our technical engineering team for equipment specifications, 
+              industrial procurement inquiries, and international logistics support.
+            </p>
+          </Col>
+        </Row>
 
-          <div className="mb-4">
-   
-            <div className="contact-info-box p-2 mb-3 d-flex align-items-center">
-              <div className="icon-container bg-info bg-opacity-10 p-3 rounded-circle me-2">
-                <FaEnvelope size={20} className="text-info" />
+        <Row className="g-4">
+          
+          <Col lg={8}>
+            <Card className="border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+              <Row className="g-0 h-100">
+                <Col md={5} className="p-5 text-white d-flex flex-column justify-content-center" style={{backgroundColor:'#0b4a99'}} >
+                  <h3 className="fw-bold mb-4">Corporate Headquarters</h3>
+                  <div className="mb-4">
+                    <p className="small text-uppercase text-white-50 mb-1">Registered Office</p>
+                    <p className="mb-0">G3 G4 Zaman Plaza, Dil Muhammad Linked Brandreth Road, Lahore, Pakistan</p>
+                  </div>
+                  <div>
+                    <p className="small text-uppercase text-white-50 mb-1">Connect on Social</p>
+                    <a href="https://www.facebook.com/ASIANPUMPSPVTLTD/photos?_rdc=1&_rdr#" target="_blank" rel="noreferrer" className="text-white">
+                      <FaFacebook size={30} />
+                    </a>
+                    <a href="https://wa.me/923280922229" target="_blank" rel="noreferrer" className="text-white ms-3">
+                      <FaWhatsapp size={30} />
+                    </a>
+                    
+                  </div>
+                </Col>
+                
+                <Col md={7} className="p-5 bg-white">
+                  <h4 className="fw-bold mb-4 text-dark">Technical Support Channels</h4>
+                  
+                  <div className="d-flex mb-4">
+                    <div className="contact-icon-box me-3">
+                      <FaPhone className="text-success" />
+                    </div>
+                    <div>
+                      <h6 className="fw-bold mb-0">Direct Sales Line</h6>
+                      <p className="text-muted mb-0">+92 328 0922229</p>
+                      <p className="text-muted small">042-37243375 (Landline)</p>
+                    </div>
+                  </div>
+
+                  <div className="d-flex mb-4">
+                    <div className="contact-icon-box me-3">
+                      <FaEnvelope className="text-success" />
+                    </div>
+                    <div>
+                      <h6 className="fw-bold mb-0">Official Email</h6>
+                      <p className="text-muted mb-0">asianpumps115pvtltd@gmail.com</p>
+                    </div>
+                  </div>
+
+                  <div className="d-flex">
+                    <div className="contact-icon-box me-3">
+                      <FaGlobe className="text-success" />
+                    </div>
+                    <div>
+                      <h6 className="fw-bold mb-0">Digital Inquiries</h6>
+                      <p className="text-muted mb-0">info@mughalpumps.com.pk</p>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Card>
+          </Col>
+
+          
+          <Col lg={4}>
+            <Card className="border-0 shadow-sm rounded-4 p-5 h-100 bg-white">
+              <h4 className="fw-bold mb-4 text-dark d-flex align-items-center">
+                <FaClock className="me-2 text-success" size={20} /> Operational Hours
+              </h4>
+              <p className="text-muted small mb-4">
+                Our technical team is available during the following hours (GMT +5) for equipment demonstrations and site visits.
+              </p>
+              
+              <div className="schedule-list">
+                <div className="d-flex justify-content-between mb-3 pb-2 border-bottom">
+                  <span className="fw-semibold">Monday - Friday</span>
+                  <span className="text-success fw-bold">9 AM - 9 PM</span>
+                </div>
+                <div className="d-flex justify-content-between mb-3 pb-2 border-bottom">
+                  <span className="fw-semibold">Saturday</span>
+                  <span className="text-success fw-bold">9 AM - 5 PM</span>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <span className="fw-semibold text-muted">Sunday</span>
+                  <span className="text-danger fw-bold italic">Closed</span>
+                </div>
               </div>
-              <div>
-                <h6 className="mb-0 text-white">Email</h6>
-                <a href="mailto:aleenaatiq59@gmail.com" className="text-secondary text-decoration-none">
-                  aleenaatiq59@gmail.com
-                </a>
+
+              <div className="mt-auto pt-4">
+                <div className="alert alert-info border-0 rounded-3 small py-2">
+                  <strong>Note:</strong> Standard Lunch Break observed daily between 1:00 PM - 2:00 PM.
+                </div>
               </div>
-            </div>
-
-            <div className="contact-info-box p-2 mb-3 d-flex align-items-center">
-              <div className="icon-container bg-info bg-opacity-10 p-3 rounded-circle  me-2">
-                <FaPhone size={10} className="text-info" />
-              </div>
-              <div>
-                <h6 className="mb-0 text-white">Phone</h6>
-                <a href="tel:+923124540556" className=" text-secondary text-decoration-none">
-                  +92 3124540556
-                </a>
-              </div>
-            </div>
-
-            
-            <div className="contact-info-box p-2 mb-3 d-flex align-items-center">
-              <div className="icon-container bg-info bg-opacity-10 p-3 rounded-circle me-2">
-                <FaMapMarkerAlt size={20} className="text-secondary" />
-              </div>
-              <div>
-                <h6 className="mb-0 text-white">Location</h6>
-                <p className="mb-0 text-secondary">Lahore, Pakistan</p>
-              </div>
-            </div>
-          </div>
-
-          <h5 className="text-white mt-5 mb-3">Follow Me</h5>
-          <div className="d-flex">
-            <a 
-              href="https://github.com/Aleenacoder-59" 
-              className="social-icon me-3 d-flex align-items-center justify-content-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size={24} />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/aleena-atiq-a7274a279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
-              className="social-icon me-3 d-flex align-items-center justify-content-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={24} />
-            </a>
-          </div>
-        </Col>
-
-        {/* Contact Form Column */}
-        <Col md={5} className="p-4 contact-form-container">
-          <h4 className="text-white mb-4">Send a Message</h4>
-          <Form onSubmit={handleSubmit}>
-            {/* Name and Email fields */}
-            <Row className="mb-3">
-              <Col xs={12} md={6} className="mb-3 mb-md-0">
-                <Form.Group controlId="formName">
-                  <Form.Label className="text-white">Name *</Form.Label>
-                  <Form.Control 
-                    type="text" 
-                    className="transparent-input text-white"
-                    name="name" 
-                    placeholder="Your full name" 
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </Form.Group>
-              </Col>
-              <Col xs={12} md={6}>
-                <Form.Group controlId="formEmail">
-                  <Form.Label className="text-white">Email *</Form.Label>
-                  <Form.Control 
-                    type="email" 
-                    className="transparent-input text-white"
-                    name="email" 
-                    placeholder="your.email@example.com" 
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-
-            {/* Subject field */}
-            <Form.Group controlId="formSubject" className="mb-3">
-              <Form.Label className="text-white">Subject *</Form.Label>
-              <Form.Control 
-                type="text" 
-                className="transparent-input text-white"
-                name="subject" 
-                placeholder="What's this about?"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-
-            <Form.Group controlId="formMessage" className="mb-4">
-              <Form.Label className="text-white">Message *</Form.Label>
-              <Form.Control 
-                as="textarea" 
-                rows={5} 
-                className="transparent-input text-white"
-                name="message"
-                placeholder="Tell me about your project..."
-                value={formData.message}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-
-            {/* Submit button */}
-            <Button 
-              type="submit" 
-              className="submit-btn w-100 py-2 d-flex justify-content-center align-items-center"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? (
-                <>
-                  <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                  Sending...
-                </>
-              ) : (
-                <>
-                  <FiSend className="me-2" /> Send Message
-                </>
-              )}
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-
-      
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 };

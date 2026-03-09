@@ -1,20 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import owner from '../assets/owner.jpg'; 
 
 const About = () => {
   const headerRef = useRef(null);
   const leftColRef = useRef(null);
-  const cardsRef = useRef([]);
-  
-  
-  const addToCardsRef = (el) => {
-    if (el && !cardsRef.current.includes(el)) {
-      cardsRef.current.push(el);
-    }
-  };
+  const imageColRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -29,20 +20,16 @@ const About = () => {
         }
       });
     };
-//  { It is a Frontend Behavior Api}
+    
     const observer = new IntersectionObserver(observerCallback, observerOptions);   
     if (headerRef.current) observer.observe(headerRef.current);
     if (leftColRef.current) observer.observe(leftColRef.current);
-    cardsRef.current.forEach(card => {
-      if (card) observer.observe(card);
-    });
+    if (imageColRef.current) observer.observe(imageColRef.current);
 
     return () => {
       if (headerRef.current) observer.unobserve(headerRef.current);
       if (leftColRef.current) observer.unobserve(leftColRef.current);
-      cardsRef.current.forEach(card => {
-        if (card) observer.unobserve(card);
-      });
+      if (imageColRef.current) observer.unobserve(imageColRef.current);
     };
   }, []);
 
@@ -51,115 +38,81 @@ const About = () => {
       fluid
       id="about"
       className="px-4 py-5 about-section"
-      style={{
-        background: "linear-gradient(to right, #000000, #091b35)",
-        minHeight: "100vh"
-      }}
+      style={{ backgroundColor: '#ffffff', overflow: 'hidden' }}
     >
-     
+      
       <Row className="justify-content-center mb-5">
         <Col xs={12} className="text-center mb-4">
-          <div ref={headerRef} className="pre-animate">
-            <h1 className="text-white display-5 fw-bold">
-              About <span style={{ color: '	#33c4c4ff' }}>Me</span>
+          <div ref={headerRef} className="pre-animate" style={{ transition: 'all 0.8s ease' }}>
+            <h6 className="text-uppercase fw-bold mb-2" style={{ color: '#0b4a99', letterSpacing: '2px', fontFamily: 'Inter, sans-serif' }}>
+             About US
+            </h6>
+            <h1 className="text-black display-5 fw-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              Our Legacy of <span style={{ color: '#2fd838' }}>Excellence</span> 
             </h1>
-            <p className="text-secondary fs-5 mt-3">
-              Turning imaginative concepts into powerful web applications.
-            </p>
+            <div 
+              className="mx-auto mt-3" 
+              style={{ width: '60px', height: '4px', backgroundColor: '#2fd838' }}
+            ></div>
           </div>
         </Col>
       </Row>
 
-      <Row className="justify-content-center">
+      <Row className="justify-content-center align-items-center">
         <Col lg={10}>
-          <Row>
-            
-            <Col md={6} className="mb-5">
-              <div ref={leftColRef} className="pre-animate">
-                <Card className="h-100 border-0 bg-transparent text-white">
-                  <Card.Body>
-                    <Card.Title as="h3" className="mb-2 text-white">
-                       Where Code Meets Creativity 
-                    </Card.Title>
-                    <Card.Text className="fs-6 lh-lg text-secondary">
-                      Self-taught frontend developer with one year of dedicated experience building modern web applications using React.js. I specialize in creating responsive, user-focused interfaces while maintaining clean, scalable code.
-                    </Card.Text>
-                    <Card.Text className="fs-6 lh-lg text-secondary">
-                      My learning journey has been project-driven, allowing me to explore everything from component architecture to performance optimization. I believe great development combines technical skill with creative problem-solving, and I'm ready to bring this mindset to collaborative development environments.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+          <Row className="align-items-center">
+           
+            <Col md={6} className="mb-5 mb-md-0">
+              <div ref={leftColRef} className="pre-animate" style={{ transition: 'all 0.8s ease' }}>
+                <h2 className="fw-bold mb-4" style={{ color: '#0b4a99', fontFamily: 'Poppins, sans-serif', fontSize: '2.5rem' }}>
+                  Where Engineering <br/> <span style={{ color: '#2fd838' }}>Meets Innovation</span> 
+                </h2>
+                <p className="fs-6 lh-lg text-dark opacity-75" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Asian Pumps Pvt. Ltd. is an esteemed pioneer in the water boring industry of Pakistan. 
+                  Holding its position as a top-tier brand since its establishment in 1974, we have built 
+                  a formidable reputation for delivering cutting-edge water pumping solutions that 
+                  cater to agricultural, industrial, and residential sectors.
+                </p>
+                <p className="fs-6 lh-lg text-dark opacity-75" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Under the visionary leadership of our CEO, <span className="fw-bold text-black">Hassan Ilyas</span>, 
+                  the company has risen to the pinnacle of the industry. We pride ourselves on a highly 
+                  skilled workforce, including a fully equipped mechanical team and engineers dedicated 
+                  to unparalleled efficiency and precision.
+                </p>
+                
+                {/* Years of Experience Badge */}
+                <div className="d-flex align-items-center mt-4">
+                    <div className="me-3 display-4 fw-bold" style={{ color: '#2fd838', fontFamily: 'Poppins, sans-serif' }}>50+</div>
+                    <div className="text-uppercase fw-bold lh-1 text-dark" style={{ fontSize: '0.85rem', letterSpacing: '1px', fontFamily: 'Inter, sans-serif' }}>
+                        Years of <br/> Industrial Experience
+                    </div>
+                </div>
               </div>
             </Col>
 
-            
-            <Col md={6}>
-              <Row className="g-4 mt-2">
-              
-                <Col sm={6} className="mb-3">
-                  <div ref={addToCardsRef} className="pre-animate">
-                    <Card className="h-100 border-secondary bg-transparent rounded-0">
-                      <Card.Body className="d-flex flex-column">
-                        <div className="d-flex align-items-center mb-3">
-                          <div className="rounded-2 opacity-75 d-flex align-items-center justify-content-center me-3"
-                            style={{ width: '40px', height: '40px', background: '	#33c4c4ff' }}>
-                            <i className="bi bi-code-slash text-white fs-5"></i>
-                          </div>
-                          <Card.Title as="h5" className="text-white mb-0">Clean Code</Card.Title>
-                        </div>
-                        <Card.Text className="text-secondary mb-0">
-                          Writing maintainable, scalable code following best practices
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </Col>
-
-               
-                <Col sm={6} className="mb-3">
-                  <div ref={addToCardsRef} className="pre-animate">
-                    <Card className="h-100 border-secondary bg-transparent rounded-0">
-                      <Card.Body className="d-flex flex-column">
-                        <div className="d-flex align-items-center mb-3">
-                          <div className="rounded-2 opacity-75 d-flex align-items-center justify-content-center me-3"
-                            style={{ width: '40px', height: '40px', background: '	#33c4c4ff' }}>
-                            <i className="bi bi-lightning-charge text-white fs-5"></i>
-                          </div>
-                          <Card.Title as="h5" className="text-white mb-0">Performance</Card.Title>
-                        </div>
-                        <Card.Text className="text-secondary mb-0">
-                          Optimizing applications for speed and user experience
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </Col>
-
-                {/* Years Experience Card */}
-                <Col sm={6} className="mb-3">
-                  <div ref={addToCardsRef} className="pre-animate">
-                    <Card className="h-100 border-secondary bg-transparent rounded-0">
-                      <Card.Body className="d-flex flex-column justify-content-center text-center">
-                        <h2 className="fw-bold display-4 mb-0" style={{ color: '	#33c4c4ff' }}>1+</h2>
-                        <p className="text-secondary mb-0 mt-2">Years Experience</p>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </Col>
-
-          
-                <Col sm={6} className="mb-3">
-                  <div ref={addToCardsRef} className="pre-animate">
-                    <Card className="h-100 border-secondary bg-transparent rounded-0">
-                      <Card.Body className="d-flex flex-column justify-content-center text-center">
-                        <h2 className="fw-bold display-4 mb-0" style={{ color: '	#33c4c4ff' }}>5+</h2>
-                        <p className="text-secondary mb-0 mt-2">Projects Completed</p>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </Col>
-              </Row>
+        
+            <Col md={6} className="text-center">
+              <div ref={imageColRef} className="pre-animate" style={{ transition: 'all 1s ease-out' }}>
+                <div className="position-relative d-inline-block">
+   
+                  <div 
+                    className="position-absolute About-text"
+                  ></div>
+                
+                  <Image 
+                    src={owner} 
+                    alt="Hassan Ilyas - CEO Asian Pumps"
+                    fluid
+                    className="position-relative z-1 About-img"
+                   
+                  />
+                  
+                 
+                
+                </div>
+              </div>
             </Col>
+
           </Row>
         </Col>
       </Row>
