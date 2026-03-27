@@ -74,10 +74,7 @@ const ContactPage = () => {
                     <div className="contact-icon-box me-3">
                       <FaGlobe className="text-success" />
                     </div>
-                    <div>
-                      <h6 className="fw-bold mb-0">Digital Inquiries</h6>
-                      <p className="text-muted mb-0">info@mughalpumps.com.pk</p>
-                    </div>
+                  
                   </div>
                 </Col>
               </Row>
