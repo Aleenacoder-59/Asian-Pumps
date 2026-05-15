@@ -47,39 +47,41 @@ const ContactPage = () => {
                 </Col>
                 
                 <Col md={7} className="p-5 bg-white">
-                  <h4 className="fw-bold mb-4 text-dark">Technical Support Channels</h4>
-                  
-                  <div className="d-flex mb-4">
-                    <div className="contact-icon-box me-3">
-                      <FaPhone className="text-success" />
-                    </div>
-                    <div>
-                      <h6 className="fw-bold mb-0">Direct Sales Line</h6>
-                      <p className="text-muted small">042-37243375 (Landline)</p>
-                    </div>
-                  </div>
+  <h4 className="fw-bold mb-4 text-dark">Technical Support Channels</h4>
+  
+  {/* Added align-items-center to keep the row balanced */}
+  <div className="d-flex align-items-center mb-4">
+    <div className="contact-icon-box me-3 flex-shrink-0">
+      <FaPhone className="text-success" />
+    </div>
+    <div>
+      <h6 className="fw-bold mb-0">Direct Sales Line</h6>
+      <p className="text-muted small mb-0">042-37243375 (Landline)</p>
+    </div>
+  </div>
 
-                  <div className="d-flex mb-4">
-                    <div className="contact-icon-box me-3">
-                      <FaWhatsapp className="text-success" />
-                    </div>
-                    <div>
-                      <h6 className="fw-bold mb-0">Official Whatsapp</h6>
-                      <p className="text-muted mb-0">+92 328 0922229</p>
-                    </div>
-                  </div>
-                  <div className="d-flex ">
-                    <div className="contact-icon-box me-3">
-                      <FaEnvelope className="text-success" />
-                    </div>
-                    <div>
-                      <h6 className="fw-bold mb-0">Official Email</h6>
-                      <p className="text-muted mb-0">asianpumps115pvtltd@gmail.com</p>
-                    </div>
-                  </div>
+  {/* Added align-items-center */}
+  <div className="d-flex align-items-center mb-4">
+    <div className="contact-icon-box me-3 flex-shrink-0">
+      <FaWhatsapp className="text-success" />
+    </div>
+    <div>
+      <h6 className="fw-bold mb-0">Official Whatsapp</h6>
+      <p className="text-muted small mb-0">+92 328 0922229</p>
+    </div>
+  </div>
 
-                  
-                </Col>
+  {/* Added align-items-center to fix the email icon distortion */}
+  <div className="d-flex align-items-center mb-4">
+    <div className="contact-icon-box me-3 flex-shrink-0">
+      <FaEnvelope className="text-success" />
+    </div>
+    <div>
+      <h6 className="fw-bold mb-0">Official Email</h6>
+      <p className="text-muted small mb-0">asianpumps115pvtltd@gmail.com</p>
+    </div>
+  </div>
+</Col>
               </Row>
             </Card>
           </Col>
