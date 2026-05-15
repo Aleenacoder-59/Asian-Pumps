@@ -10,27 +10,88 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* --- Logo Control --- */
+.announcement-bar {
+    height: 30px; 
+    font-size: 0.7rem;
+    background-color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1060;
+    
+}
+
+@keyframes colorCycle {
+  0%, 100% { color: black; }
+  25% { color: #e30a17; } 
+  50% { color:  #2fd838;; } 
+  75% { color:  #0b4a99; } }
+
+
+.announcement-text {
+  animation: colorCycle 4s infinite; 
+  font-weight: bold;
+  font-family:monospace;
+  transition: color 0.5s ease-in-out;
+}
+.announcement-bar img {
+    object-fit: contain; 
+    width: 24px; 
+            height: auto; 
+            margin-right: 10px;
+            border-radius: 2px;
+            display: block;
+}
+.main-navbar-container {
+    margin-top: 0 !important;
+    position: relative !important;
+    background-color: #ffffff !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Clean shadow */
+}
+
 .nav-logo-img {
-    height: 35px; /* Small on mobile so it fits next to the hamburger */
+    height: 45px;
     width: auto;
     object-fit: contain;
+    transition: height 0.3s ease;
 }
 
 @media (min-width: 992px) {
+    .announcement-bar {
+        height: 40px;
+        font-size: 0.85rem;
+    }
+
     .nav-logo-img {
-        height: 50px; /* Larger on Desktop */
+        height: 50px; /* Standard desktop size */
     }
 }
 
-/* --- Mobile Menu Fixes --- */
-.navbar-toggler {
-    padding: 0; /* Removes extra spacing around the hamburger */
+@media (max-width: 991px) {
+     
+    .your-banner-class { 
+        margin-top: 0 !important; 
+        padding-top: 0 !important;
+    }
+
+    .nav-logo-img {
+        height: 55px !important; 
+    }
+
+    .announcement-text {
+        font-size: 10px;
+    }
 }
 
-/* Ensure the navbar collapse doesn't overlap weirdly */
+/* --- Rest of your existing CSS --- */
+.navbar-toggler {
+    padding: 0;
+}
+
 .navbar-collapse {
-    background-color: white; /* Give it a solid background on mobile */
+    background-color: white;
     border-radius: 8px;
     margin-top: 10px;
     padding: 10px;
@@ -66,17 +127,12 @@ body {
         border-top: none !important; 
         padding-top: 0 !important;
     }
-    
-    .navbar-brand img {
-        height: 45px !important;
-    }
 }
 
 .menu-open-bg {
     background-color: rgba(255, 255, 255, 0.98) !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 .App {
   min-height: 100vh;
   display: flex;
@@ -110,86 +166,39 @@ body {
   border-color: #33c4c4ff !important;
 }
 
+/* --- Core Hero Section --- */
 .hero-section {
   position: relative;
-  /* Use min-height so content can expand on small screens */
-  min-height: 100vh;
-
-  background-size: cover;
-  background-position: center;
-  color: white;
-
-  /* ADD THESE THREE LINES */
+  /* Changed from 100vh to auto so it wraps your content tightly */
+  min-height: auto; 
   display: flex;
   align-items: center;
-  /* Vertically centers content in the remaining space */
-  padding-top: 80px;
-  /* Pushes content below your Navbar height */
+  /* Removed large 80px padding that created the 'vague' space */
+  padding: 40px 0; 
+  background-color: #ffffff;
+  overflow: hidden;
 }
-
-
 
 .hero-content {
   position: relative;
   z-index: 1;
 }
 
-.hero-left {
-  animation: slideLeft 1s ease forwards;
-  opacity: 0;
-}
-
-.hero-right {
-  animation: slideRight 1s ease forwards;
-  opacity: 0;
-}
-
-/* Code box */
-.hero-code-box {
-  font-family: "Fira Mono", monospace;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 14px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  display: inline-block;
-  backdrop-filter: blur(4px);
-}
-
-.code-purple {
-  color: #7639d8;
-}
-
-.code-white {
-  color: #ffffff;
-}
-
-.code-blue {
-  color: #46b5d6;
-}
-
-.code-green {
-  color: #33c4c4;
-}
-
-/* Text */
+/* --- Content Styling --- */
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: rgba(15, 97, 221, 0.473)
-}
-
-.hero-highlight {
-  color: rgb(51, 196, 75);
+  margin-bottom: 15px;
+  /* Ensure visibility against white background */
+  color: #0b4a99; 
 }
 
 .hero-description {
-  color: #b0b0b0;
+  color: #333333; /* Darker for readability on white */
   font-size: 1.1rem;
   margin-bottom: 25px;
 }
 
-/* Tags */
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
@@ -198,92 +207,66 @@ body {
 
 .hero-tags span {
   border: 1px solid #6c757d;
-  padding: 8px 14px;
-  transition: transform 0.2s ease;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 .hero-tags span:hover {
-  transform: scale(1.05);
+  background-color: #71ca28;
+  color: white;
+  border-color: #71ca28;
 }
 
-/* Images */
+/* --- Images & Carousel --- */
 .hero-image {
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   object-fit: cover;
-  height: 350px;
+  height: 400px; /* Slightly taller for desktop */
+  width: 100%;
 }
 
-@media (max-width: 768px) {
-  .hero-image {
-    height: 250px;
-  }
+/* --- Animations (Cleaned Up) --- */
+.hero-left {
+  animation: slideLeft 0.8s ease-out forwards;
 }
 
-/* Animations */
+.hero-right {
+  animation: slideRight 0.8s ease-out forwards;
+}
+
 @keyframes slideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* --- Responsive Fixes (The "Intact" Look) --- */
+@media (max-width: 991px) {
+  .hero-section {
+    /* Pulls the section up to meet the Navbar immediately */
+    padding-top: 10px; 
+    padding-bottom: 30px;
+  }
+
   .hero-title {
-    font-size: 2.2rem;
-  }
-}
-
-
-
-
-
-
-
-@keyframes bounceHover {
-  0% {
-    transform: scale(1);
+    font-size: 2rem;
+    margin-top: 20px;
   }
 
-  50% {
-    transform: scale(1.08);
+  .hero-image {
+    height: 280px; /* Keeps image compact on mobile */
   }
 
-  100% {
-    transform: scale(1.03);
+  .hero-description {
+    font-size: 1rem;
   }
 }
-
-
-.pre-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 .about-section .pre-animate:nth-child(1) {
   transition-delay: 0.1s;
@@ -306,11 +289,13 @@ body {
 }
 
 .About-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto; 
   border-radius: 15px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border: 1px solid #f0f0f0;
-  max-width: 400px;
-  object-fit: cover;
+  display: block; /* Removes any tiny bottom gaps caused by inline-block */
 }
 
 .About-text {
@@ -322,8 +307,8 @@ body {
   border: 8px solid #2fd838;
   z-index: 0;
   border-radius: 15px;
+  pointer-events: none; 
 }
-
 .pre-animate {
   opacity: 0;
   transform: translateY(40px);
@@ -457,7 +442,29 @@ body {
   height: 450px;
   object-fit: cover;
 }
+.collab-img-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 20px; /* Gives the green band space to show */
+}
 
+.collab-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%; 
+  height: 90%;
+  border: 8px solid #2fd838; 
+  border-radius: 15px;
+  z-index: -1; 
+}
+
+.collab-img {
+  border-radius: 15px;
+  display: block;
+  width: 100%;
+}
 .collab-section {
 
   padding-top: 3rem;

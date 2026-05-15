@@ -10,7 +10,27 @@ import PunjabGovt from '../assets/punjab govt.png';
 import Savour from '../assets/savour.png';
 import StyleTextile from '../assets/style textile.jpg'; 
 import Zrk from '../assets/zrk.png';
-
+import Lake from '../assets/lake city.png';
+import Acted from '../assets/acted.png';
+import Adam from '../assets/adams.png';
+import Jalil from '../assets/al-jalil.png';
+import Agrui from '../assets/agrui.png';
+import Kabir from '../assets/al-kabir.png';
+import CDA from '../assets/cda.png';
+import Atomic from '../assets/atomic.png';
+import Gourmet from '../assets/gourmet.png';
+import Bahria from '../assets/bahria.png';
+import Fata from '../assets/fata.png';
+import Murree from '../assets/murree.png';
+import Nestle from '../assets/nestle.png';
+import Police from '../assets/police.png';
+import Riaz from '../assets/riaz.png';
+import Rescue from '../assets/rescue.png';
+import Sadiq from '../assets/sadiq.png';
+import Saif from '../assets/saif.png';
+import University from '../assets/university.png';
+import Summa from '../assets/summa.png';
+import Kashmir from '../assets/kashmir.png';
 const clientList = [
   { name: 'Pepsi', logo: Pepsi },
   { name: 'WAPDA', logo: Wapda },
@@ -21,6 +41,27 @@ const clientList = [
   { name: 'Savour Foods', logo: Savour },
   { name: 'Style Textile', logo: StyleTextile },
   { name: 'ZRK Group', logo: Zrk },
+  { name: 'Lake City', logo: Lake },
+  { name: 'Acted', logo: Acted },
+  { name: 'Adams', logo: Adam },
+  { name: 'Al Jalil', logo: Jalil },
+  { name: 'Agrui', logo: Agrui },
+  { name: 'Al Kabir', logo: Kabir },
+  { name: 'CDA', logo: CDA },
+  { name: 'Atomic Energy', logo: Atomic },
+  { name: 'Gourmet', logo: Gourmet },
+  { name: 'Bahria Town', logo: Bahria },
+  { name: 'FATA', logo: Fata },
+  { name: 'Murree Brewery', logo: Murree },
+  { name: 'Nestle', logo: Nestle },
+  { name: 'Police Department', logo: Police },
+  { name: 'Riaz Bottlers', logo: Riaz },
+  { name: 'Rescue Committee', logo: Rescue },
+  { name: 'Sadiq Welfare', logo: Sadiq },
+  { name: 'Saif Group', logo: Saif },
+  { name: 'University of Peshawar', logo: University }, 
+  { name: 'Summa', logo: Summa },
+  { name: 'Kashmir Institute', logo: Kashmir }
 ];
 
 const Clients = () => {

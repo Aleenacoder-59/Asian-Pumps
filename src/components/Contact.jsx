@@ -55,12 +55,20 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h6 className="fw-bold mb-0">Direct Sales Line</h6>
-                      <p className="text-muted mb-0">+92 328 0922229</p>
                       <p className="text-muted small">042-37243375 (Landline)</p>
                     </div>
                   </div>
 
                   <div className="d-flex mb-4">
+                    <div className="contact-icon-box me-3">
+                      <FaWhatsapp className="text-success" />
+                    </div>
+                    <div>
+                      <h6 className="fw-bold mb-0">Official Whatsapp</h6>
+                      <p className="text-muted mb-0">+92 328 0922229</p>
+                    </div>
+                  </div>
+                  <div className="d-flex ">
                     <div className="contact-icon-box me-3">
                       <FaEnvelope className="text-success" />
                     </div>
@@ -70,12 +78,7 @@ const ContactPage = () => {
                     </div>
                   </div>
 
-                  <div className="d-flex">
-                    <div className="contact-icon-box me-3">
-                      <FaGlobe className="text-success" />
-                    </div>
                   
-                  </div>
                 </Col>
               </Row>
             </Card>

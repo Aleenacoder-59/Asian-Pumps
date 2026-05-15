@@ -4,7 +4,7 @@ import HeaderWrapper from './components/Headerwrapper.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './components/About.jsx';
 import Clients from './components/Clients.jsx';
-import Projects from './components/Projects.jsx';
+
 import Contact from './components/Contact.jsx';
 
 import Footer from './components/Footer.jsx';

@@ -1,12 +1,11 @@
 import React from "react";
 import MyNavbar from "./Navbar.jsx";
 import Hero from "./Hero.jsx";
-// import "./HeaderWrapper.css";
-
 
 const HeaderWrapper = () => {
   return (
-    <header className="site-header">
+    
+    <header className="site-header bg-white position-relative">
       <MyNavbar />
       <Hero />
     </header>

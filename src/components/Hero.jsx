@@ -5,15 +5,13 @@ import Carousel from "react-bootstrap/Carousel";
 
 const Hero = () => {
   return (
-    <section className="hero-section">
-      
+    
+    <section className="hero-section pt-0 pt-md-5">
       <div className="hero-overlay"></div>
 
       <Container className="hero-content">
-       
         <Row className="align-items-center d-flex flex-column flex-md-row">
-
-        
+          
           <Col xs={12} md={6} className="hero-right order-1 order-md-2 mb-4 mb-md-0">
             <Carousel fade controls={false} indicators={false} interval={3000}>
               <Carousel.Item>
@@ -26,8 +24,8 @@ const Hero = () => {
 
               <Carousel.Item>
                 <img
-                  src="/china.jpg"
-                  alt="Collaboration with Chinease vendors"
+                  src="/t2.jpg"
+                  alt="Collaboration with Turkish vendors"
                   className="hero-image d-block w-100 rounded shadow-lg"
                 />
               </Carousel.Item>
@@ -42,7 +40,7 @@ const Hero = () => {
 
               <Carousel.Item>
                 <img
-                  src="/pumps.jpg"
+                  src="/h2.jpg"
                   alt="Water Pumps"
                   className="hero-image d-block w-100 rounded shadow-lg"
                 />
@@ -50,11 +48,11 @@ const Hero = () => {
             </Carousel>
           </Col>
 
+          {/* Text Content Column */}
           <Col xs={12} md={6} className="hero-left text-start order-2 order-md-1">
             <h1 className="hero-title fw-bold">
-              
-<span style={{ color: '#0b4a99' }}>Asian</span>{" "}
-<span style={{ color: '#71ca28' }}>Pumps</span>
+              <span style={{ color: '#0b4a99' }}>Asian</span>{" "}
+              <span style={{ color: '#71ca28' }}>Pumps</span>
             </h1>
             
             <h2 className="text-black h5 mt-2"> 
@@ -72,7 +70,7 @@ const Hero = () => {
               <span>Irrigation Systems</span>
               <span>Water Engineering</span>
               <span>Residential Solutions</span>
-                        <span>Centrifugal Pumps</span>
+              <span>Centrifugal Pumps</span>
               <span>Turbine Pumps</span>
             </div>
           </Col>

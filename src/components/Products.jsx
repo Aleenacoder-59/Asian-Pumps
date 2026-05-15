@@ -1,6 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Row, Col, Modal, Button, Table, Image } from 'react-bootstrap';
-
+import pump from '/src/assets/submerisble pump.jpeg';
+import solar from '/src/assets/solar water pump.jpg';
+import turbine from '/src/assets/Turbine.jpg';
+import industry from '/src/assets/industry.jpeg';
+import Bore from '/src/assets/Bore.jpg';
+import Drill from '/src/assets/Drill.jpg';
+import centrifugal from '/src/assets/centrifugal.jpg';
+import residential from '/src/assets/residential.jpg';
+import electrical from '/src/assets/electrical.jpg';
 const Products = () => {
   const [show, setShow] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
@@ -35,63 +43,63 @@ const Products = () => {
     { 
       title: "Submersible Pumps", 
       type: "Product", 
-      img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800",
+      img: pump,
       specs: { head: "Up to 200m", flow: "15-300 m³/h", power: "5HP - 150HP", material: "SS 304/316" },
       desc: "Precision-engineered for deep-well extraction. Features sand-resistant technology and multi-stage impellers for maximum efficiency."
     },
     { 
       title: "Solar Water Systems", 
       type: "Service", 
-      img: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800",
+      img: solar,
       specs: { panels: "Tier-1 Mono Perc", efficiency: "98% Inverter", tracking: "Manual/Auto", life: "25 Years" },
       desc: "High-efficiency sustainable energy solutions. We provide complete solar integration for agricultural tube wells and industrial water supply."
     },
     { 
       title: "Turbine Pumps", 
       type: "Product", 
-      img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800",
+      img: turbine,
       specs: { design: "Vertical Multi-Stage", cooling: "Water/Oil Cooled", duty: "Continuous S1", rpm: "1450" },
       desc: "The heavy-duty choice for large-scale irrigation. Our turbines offer unmatched durability and high-volume delivery."
     },
     { 
       title: "Industrial Piping", 
       type: "Product", 
-      img: "https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=800",
+      img: industry,
       specs: { materials: "MS, GI, uPVC, PPRC", sizes: "0.5\" to 24\" Diameter", pressure: "PN10, PN16, PN25", standards: "ASTM / DIN / BS" },
       desc: "High-grade piping solutions for industrial infrastructure. Includes MS/GI for strength and uPVC/PPRC for corrosion-resistance."
     },
     { 
       title: "Boring Systems", 
       type: "Service", 
-      img: "https://images.unsplash.com/photo-1517089152318-42ec560349c0?q=80&w=800",
+      img: Bore,
       specs: { method: "Rotary Drilling", depth: "Up to 1500ft", casing: "UPVC/Steel", accuracy: "Geologically Surveyed" },
       desc: "Using advanced drilling rigs and 50+ years of mapping. We guarantee precision boring for stable and high-yield water veins."
     },
     {
       title: "Drilling Machinery", 
       type: "Product", 
-      img: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800",
+      img: Drill,
       specs: { capacity: "2\" to 15\" Dia", maxDepth: "1000 Meters", engine: "Heavy Duty Diesel", mount: "Truck/Crawler" },
       desc: "Professional-grade borehole drilling machines capable of 2-inch to 15-inch diameter drilling. Built for high torque and rapid penetration in rocky and sandy terrains."
     },
     { 
       title: "Centrifugal Pumps", 
       type: "Product", 
-      img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800",
+      img: centrifugal,
       specs: { casing: "Cast Iron", suction: "End Suction", rpm: "2900", sealing: "Mechanical Seal" },
       desc: "Versatile pumping solutions for industrial liquid transfer, fire fighting, and high-rise building water management."
     },
     { 
       title: "Residential Solutions", 
       type: "Service", 
-      img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800",
+      img: residential,
       specs: { system: "Home Boosters", filtration: "Multi-Stage RO", smart: "Auto-Tank Level", pressure: "Constant Flow" },
       desc: "Tailored water solutions for modern homes. Includes high-pressure booster pumps and advanced purification systems for safe, consistent domestic water."
     },
     { 
       title: "Electrical Systems", 
       type: "Service", 
-      img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800",
+      img: electrical,
       specs: { control: "VFD/Soft Starter", protection: "Phase/Dry Run", panel: "IP65 Rated", automation: "IoT Ready" },
       desc: "Customized control panel manufacturing. We implement advanced electrical protections to ensure your pump motors operate safely."
     }

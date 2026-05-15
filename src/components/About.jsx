@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import owner from '../assets/owner.jpg'; 
-
+import h3 from '../assets/h3.jpeg';
 const About = () => {
   const headerRef = useRef(null);
   const leftColRef = useRef(null);
@@ -91,27 +90,20 @@ const About = () => {
             </Col>
 
         
-            <Col md={6} className="text-center">
-              <div ref={imageColRef} className="pre-animate" style={{ transition: 'all 1s ease-out' }}>
-                <div className="position-relative d-inline-block">
-   
-                  <div 
-                    className="position-absolute About-text"
-                  ></div>
-                
-                  <Image 
-                    src={owner} 
-                    alt="Hassan Ilyas - CEO Asian Pumps"
-                    fluid
-                    className="position-relative z-1 About-img"
-                   
-                  />
-                  
-                 
-                
-                </div>
-              </div>
-            </Col>
+   <Col md={6} className="text-center">
+  <div ref={imageColRef} className="pre-animate" style={{ transition: 'all 1s ease-out' }}>
+    <div className="position-relative d-inline-block">
+      <div className="position-absolute About-text"></div>
+      <Image 
+        src={h3} 
+        alt="Hassan Ilyas - CEO Asian Pumps"
+        fluid
+        className="position-relative z-1 About-img"
+      />
+      
+    </div>
+  </div>
+</Col>
 
           </Row>
         </Col>
