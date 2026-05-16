@@ -56,7 +56,7 @@ const ContactPage = () => {
     </div>
     <div>
       <h6 className="fw-bold mb-0">Direct Sales Line</h6>
-      <p className="text-muted small mb-0">042-37243375 (Landline)</p>
+      <p className="text-muted small mb-0">042-37232329 (Landline)</p>
     </div>
   </div>
 
@@ -71,14 +71,13 @@ const ContactPage = () => {
     </div>
   </div>
 
-  {/* Added align-items-center to fix the email icon distortion */}
   <div className="d-flex align-items-center mb-4">
     <div className="contact-icon-box me-3 flex-shrink-0">
       <FaEnvelope className="text-success" />
     </div>
     <div>
       <h6 className="fw-bold mb-0">Official Email</h6>
-      <p className="text-muted small mb-0">asianpumps115pvtltd@gmail.com</p>
+      <p className="text-muted small mb-0">asianpumps1115pvtltd@gmail.com</p>
     </div>
   </div>
 </Col>
