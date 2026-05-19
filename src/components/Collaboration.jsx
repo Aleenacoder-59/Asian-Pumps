@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Partner from '../assets/Trial 2.png'; 
+import Partner from '../assets/trial 3.jpeg'; 
 
 const Collaboration = () => {
   return (
