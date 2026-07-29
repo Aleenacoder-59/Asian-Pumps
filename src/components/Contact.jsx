@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaClock, FaGlobe, FaFacebook, FaWhatsapp, FaTiktok, FaInstagram } from 'react-icons/fa';
-import { RiH4 } from 'react-icons/ri';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaClock, FaGlobe, FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa6';
+
 
 const ContactPage = () => {
   return (
