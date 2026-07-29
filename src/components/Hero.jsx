@@ -51,8 +51,8 @@ const Hero = () => {
           {/* Text Content Column */}
           <Col xs={12} md={6} className="hero-left text-start order-2 order-md-1">
             <h1 className="hero-title fw-bold">
-              <span style={{ color: '#0b4a99' }}>Asian</span>{" "}
-              <span style={{ color: '#71ca28' }}>Pumps</span>
+              <span style={{ color: '#0b4a99' }}>Water Pumps</span>{" "}
+              <span style={{ color: '#71ca28' }}>in Pakistan</span>
             </h1>
             
             <h2 className="text-black h5 mt-2"> 
