@@ -10,7 +10,7 @@ const Collaboration = () => {
        
         <Row className="justify-content-center text-center mb-5">
           <Col lg={8}>
-            <h6 className="collab-top-label">Global Strategic Alliance</h6>
+            <h4 className="collab-top-label">Global Strategic Alliance</h4>
             <h2 className="collab-top-title">Direct Collaboration with <span style={{color:'#2fd838'}}>Turkish Manufacturers</span> </h2>
             <div className="collab-title-underline"></div>
           </Col>

@@ -14,9 +14,9 @@ const Support = () => {
           <Row className="align-items-center">
             
             <Col lg={7} className="pe-lg-5">
-              <h6 className="fw-bold text-uppercase mb-3" style={{ color: '#0b4a99', letterSpacing: '1px', fontSize: '0.85rem' }}>
+              <h4 className="fw-bold text-uppercase mb-3" style={{ color: '#0b4a99', letterSpacing: '1px', fontSize: '0.85rem' }}>
                 24/7 Customer Support
-              </h6>
+              </h4>
               
               <h2 className="display-5 fw-bold text-dark mb-4" style={{ lineHeight: '1.2' }}>
                 Repair <span style={{ color: '#2fd838' }}> & Installation</span> <br />

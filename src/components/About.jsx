@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import h3 from '../assets/h3.jpeg';
+import { RiH4 } from 'react-icons/ri';
 const About = () => {
   const headerRef = useRef(null);
   const leftColRef = useRef(null);
@@ -43,12 +44,12 @@ const About = () => {
       <Row className="justify-content-center mb-5">
         <Col xs={12} className="text-center mb-4">
           <div ref={headerRef} className="pre-animate" style={{ transition: 'all 0.8s ease' }}>
-            <h6 className="text-uppercase fw-bold mb-2" style={{ color: '#0b4a99', letterSpacing: '2px', fontFamily: 'Inter, sans-serif' }}>
+            <h4 className="text-uppercase fw-bold mb-2" style={{ color: '#0b4a99', letterSpacing: '2px', fontFamily: 'Inter, sans-serif' }}>
              About US
-            </h6>
-            <h1 className="text-black display-5 fw-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            </h4>
+            <h2 className="text-black display-5 fw-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Our Legacy of <span style={{ color: '#2fd838' }}>Excellence</span> 
-            </h1>
+            </h2>
             <div 
               className="mx-auto mt-3" 
               style={{ width: '60px', height: '4px', backgroundColor: '#2fd838' }}
@@ -63,9 +64,9 @@ const About = () => {
            
             <Col md={6} className="mb-5 mb-md-0">
               <div ref={leftColRef} className="pre-animate" style={{ transition: 'all 0.8s ease' }}>
-                <h2 className="fw-bold mb-4" style={{ color: '#0b4a99', fontFamily: 'Poppins, sans-serif', fontSize: '2.5rem' }}>
+                <h3 className="fw-bold mb-4" style={{ color: '#0b4a99', fontFamily: 'Poppins, sans-serif', fontSize: '2.5rem' }}>
                   Where Engineering <br/> <span style={{ color: '#2fd838' }}>Meets Innovation</span> 
-                </h2>
+                </h3>
                 <p className="fs-6 lh-lg text-dark opacity-75" style={{ fontFamily: 'Inter, sans-serif' }}>
                   Asian Pumps Pvt. Ltd. is an esteemed pioneer in the water boring industry of Pakistan. 
                   Holding its position as a top-tier brand since its establishment in 1974, we have built 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaClock, FaGlobe, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaClock, FaGlobe, FaFacebook, FaWhatsapp, FaTiktok } from 'react-icons/fa';
+import { RiH4 } from 'react-icons/ri';
 
 const ContactPage = () => {
   return (
@@ -9,9 +10,9 @@ const ContactPage = () => {
         
         <Row className="justify-content-center mb-5">
           <Col lg={8} className="text-center">
-            <h6 className="text-uppercase fw-bold  mb-2" style={{ letterSpacing: '2px', color: '#0b4a99' }}>
+            <h4 className="text-uppercase fw-bold  mb-2" style={{ letterSpacing: '2px', color: '#0b4a99' }}>
               Contact Information
-            </h6>
+            </h4>
             <h1 className="display-5 fw-bold text-dark mb-3">
               Global Industrial  <span style={{color: '#2fd838'}}> Pump Solutions</span>
             </h1>
@@ -42,7 +43,12 @@ const ContactPage = () => {
                     <a href="https://wa.me/923280922229" target="_blank" rel="noreferrer" className="text-white ms-3">
                       <FaWhatsapp size={30} />
                     </a>
-                    
+                    <a href="https://www.tiktok.com/@asian.pumps.pvt.l?_r=1&_t=ZS-98JE76uGaUp" target="_blank" rel="noreferrer" className="text-white ms-3">
+                      <FaTiktok size={30} />
+                    </a>
+                    <a href="https://www.instagram.com/asian.pumps/" target="_blank" rel="noreferrer" className="text-white ms-3">
+                      <FaInstagram size={30} />
+                    </a>
                   </div>
                 </Col>
                 
@@ -55,18 +61,18 @@ const ContactPage = () => {
       <FaPhone className="text-success" />
     </div>
     <div>
-      <h6 className="fw-bold mb-0">Direct Sales Line</h6>
+      <h5 className="fw-bold mb-0">Direct Sales Line</h5>
       <p className="text-muted small mb-0">042-37232329 (Landline)</p>
     </div>
   </div>
 
-  {/* Added align-items-center */}
+  
   <div className="d-flex align-items-center mb-4">
     <div className="contact-icon-box me-3 flex-shrink-0">
       <FaWhatsapp className="text-success" />
     </div>
     <div>
-      <h6 className="fw-bold mb-0">Official Whatsapp</h6>
+      <h5 className="fw-bold mb-0">Official Whatsapp</h5>
       <p className="text-muted small mb-0">+92 328 0922229</p>
     </div>
   </div>
@@ -76,7 +82,7 @@ const ContactPage = () => {
       <FaEnvelope className="text-success" />
     </div>
     <div>
-      <h6 className="fw-bold mb-0">Official Email</h6>
+      <h5 className="fw-bold mb-0">Official Email</h5>
       <p className="text-muted small mb-0">asianpumps1115pvtltd@gmail.com</p>
     </div>
   </div>

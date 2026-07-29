@@ -110,7 +110,7 @@ const Products = () => {
       <Container>
         <Row className="mb-5 justify-content-center text-center">
           <Col md={10}>
-            <h6 className="fw-bold" style={{ color: '#0b4a99', letterSpacing: '3px' }}>OUR CAPABILITIES</h6>
+            <h4 className="fw-bold" style={{ color: '#0b4a99', letterSpacing: '3px' }}>OUR CAPABILITIES</h4>
             <h2 className="display-5 fw-bold text-dark mb-3">Engineered for  <span style={{ color: '#2fd838' }}>Performance</span></h2>
             <div style={{ height: '3px', backgroundColor: '#2fd838', width: '80px', margin: '0 auto' }}></div>
           </Col>
