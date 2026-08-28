@@ -71,9 +71,9 @@ const Clients = () => {
       <Row className="justify-content-center mb-4 text-white">
         <Col xs={12} className="text-center">
           <h4 className="collab-top-label text-uppercase mb-2">Our Portfolio</h4>
-          <h1 className="text-black display-5 fw-bold">
+          <h2 className="text-black display-5 fw-bold">
             Trusted <span style={{ color: '#2fd838' }}> & Valued Clients</span>
-          </h1>
+          </h2>
           <div className="collab-title-underline mb-3"></div>
           <p className='text-center text-secondary mt-2'>
             Serving a diverse range of International, Commercial, and Domestic sectors.

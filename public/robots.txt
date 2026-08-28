@@ -1,0 +1,6 @@
+# Allow all standard search engine crawlers full access to the site
+User-agent: *
+Allow: /
+
+# Point search engines directly to your sitemap
+Sitemap: https://asianpumpspk.com/sitemap.xml
