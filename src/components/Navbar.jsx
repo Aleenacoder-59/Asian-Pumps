@@ -2,35 +2,66 @@ import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 const MyNavbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleToggle = () => {
         setMenuOpen(!isMenuOpen);
     };
 
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
+    const handleNavClick = (item) => {
+        if (isMenuOpen) setMenuOpen(false);
+
+        // 1. If 'blog' is clicked, use React Router to switch page
+        if (item === 'blog') {
+            navigate('/blog');
+            return;
+        }
+
+        // 2. If clicking a section link while on /blog, return to home first
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                const element = document.getElementById(item);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+            return;
+        }
+
+        // 3. If already on the home page, scroll directly
+        const element = document.getElementById(item);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
+    };
+
+    const handleLogoClick = (e) => {
+        e.preventDefault();
         if (isMenuOpen) setMenuOpen(false);
+
+        if (location.pathname !== '/') {
+            navigate('/');
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.history.pushState("", "", "/");
+        }
     };
 
     return (
         <>
-
-
-            <div
-                className="announcement-bar w-100 d-flex justify-content-center align-items-center bg-white"
-            >
+            <div className="announcement-bar w-100 d-flex justify-content-center align-items-center bg-white">
                 <img
                     className='announcement-img'
                     src="/turkey.png"
                     alt="Turkish Flag"
                 />
-                <span className="text-uppercase tracking-wider announcement-text" >
+                <span className="text-uppercase tracking-wider announcement-text">
                     Official Distributor of Premium Turkish Products
                 </span>
             </div>
@@ -39,18 +70,12 @@ const MyNavbar = () => {
                 expanded={isMenuOpen}
                 onToggle={handleToggle}
                 expand="lg"
-
                 className={`position-relative w-100 z-3 py-2 ${isMenuOpen ? 'menu-open-bg' : ''}`}
             >
                 <Container fluid className="px-3 px-lg-5 d-flex justify-content-between align-items-center">
                     <Navbar.Brand
                         href="/"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                            window.history.pushState("", "", "/");
-                            if (isMenuOpen) setMenuOpen(false);
-                        }}
+                        onClick={handleLogoClick}
                         className="me-0"
                     >
                         <img
@@ -64,10 +89,10 @@ const MyNavbar = () => {
 
                     <Navbar.Collapse id="main-navbar">
                         <Nav className="mx-auto text-center py-4 py-lg-0">
-                            {['about', 'products', 'collaboration', 'clients', 'contact'].map((item) => (
+                            {['about', 'products', 'collaboration', 'clients', 'contact', 'blog'].map((item) => (
                                 <Nav.Link
                                     key={item}
-                                    onClick={() => scrollToSection(item)}
+                                    onClick={() => handleNavClick(item)}
                                     className="mx-3 text-uppercase nav-link-custom"
                                 >
                                     {item}
