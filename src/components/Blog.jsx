@@ -40,6 +40,35 @@ const Blog = () => {
 
   return (
     <>
+      {/* Custom Styles for Heading Colors & FAQ Hover */}
+      <style>{`
+        .sub-badge {
+          color: #1d4ed8;
+          font-weight: 800;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-size: 0.85rem;
+        }
+        .text-accent-green {
+          color: #22c55e !important;
+        }
+        .heading-underline {
+          width: 60px;
+          height: 4px;
+          background-color: #22c55e;
+          border-radius: 2px;
+        }
+        .faq-card {
+          transition: all 0.3s ease-in-out;
+          border-left: 4px solid transparent;
+        }
+        .faq-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+          border-left: 4px solid #22c55e !important;
+        }
+      `}</style>
+
       {/* 1. SEO Meta Tags */}
       <Helmet>
         <title>Submersible Pumps in Pakistan: Buying and Installation Guide</title>
@@ -60,17 +89,19 @@ const Blog = () => {
         <div className="container py-3" style={{ maxWidth: '900px' }}>
           
           {/* Main Title (H1) */}
-          <header className="mb-4">
-            <span className="badge bg-primary px-3 py-2 text-uppercase mb-3">
+          <header className="mb-5 text-center">
+            <span className="sub-badge d-block mb-2">
               Buying &amp; Installation Guide
             </span>
-            <h1 className="fw-bold text-dark display-5 mb-3">
-              Submersible Pumps in Pakistan: Complete Buying and Installation Guide
+            <h1 className="fw-black text-dark display-5 mb-3">
+              Submersible Pumps in <span style={{ color: '#2fd838' }}>Pakistan</span>
             </h1>
-            <p className="text-muted fs-5 lh-base">
+            <div className="heading-underline mx-auto mb-4"></div>
+            
+            <p className="text-muted fs-5 lh-base text-start mt-4">
               The submersible pumps in Pakistan is one of the smartest investments you can make for your farm, home, or industry. If you deal with low water tables, deep borewells, or unreliable water supply, this guide will help you understand everything before you buy or install one.
             </p>
-            <p className="text-muted fs-6">
+            <p className="text-muted fs-6 text-start">
               At <strong>Asian Pumps</strong>, we get calls every day from farmers, homeowners, and industry owners who ask the same questions. Which pump fits my well? How much power do I need? What goes wrong during installation? This guide answers all of it in plain, simple language.
             </p>
           </header>
@@ -89,9 +120,11 @@ const Blog = () => {
 
           {/* Section 1: What is a Submersible Pump */}
           <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              What Is a Submersible Pump and How Does It Work?
+            <h2 className="fw-bold text-dark h3 mb-2">
+              What Is a Submersible Pump &amp; <span style={{ color: '#2fd838' }}>How It Works</span>
             </h2>
+            <div className="heading-underline mb-4"></div>
+
             <p className="text-secondary lh-lg">
               The submersible pumps in Pakistan sits fully underwater, inside a borewell or tank, and pushes water up through a pipe to the surface. Unlike other pumps that pull water, a submersible pump pushes it, which makes it far more efficient for deep wells.
             </p>
@@ -116,16 +149,10 @@ const Blog = () => {
                 ✔ <strong>This design</strong> lets the pump reach depths a single-stage pump cannot handle.
               </li>
             </ul>
-            <p className="text-secondary lh-lg">
-              Think of it like a relay race. Each impeller stage passes the water forward with extra push, until it finally reaches the surface with enough force.
-            </p>
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-3">
               Submersible vs Surface Pumps: Key Differences
             </h3>
-            <p className="text-secondary lh-lg">
-              People often confuse submersible pumps with surface pumps, but they work in very different ways.
-            </p>
             <ul className="list-group list-group-flush mb-3">
               <li className="list-group-item bg-transparent ps-0 text-secondary">
                 🔹 <strong>A surface pump</strong> sits above ground and pulls water up, so it struggles once the well gets too deep.
@@ -134,237 +161,121 @@ const Blog = () => {
                 🔹 <strong>A submersible pump</strong> sits inside the water and pushes it up, so it handles depth much better.
               </li>
               <li className="list-group-item bg-transparent ps-0 text-secondary">
-                🔹 <strong>Surface pumps</strong> are noisier since they run in the open air.
-              </li>
-              <li className="list-group-item bg-transparent ps-0 text-secondary">
                 🔹 <strong>Submersible pumps</strong> run silently because water around them muffles the sound.
               </li>
             </ul>
-            <p className="text-secondary lh-lg">
-              If your well runs deep or your water table drops in summer, a submersible unit will serve you far better than a surface model.
-            </p>
           </section>
 
           {/* Section 2: Types */}
           <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              Types of Submersible Pumps Available in Pakistan
+            <h2 className="fw-bold text-dark h3 mb-2">
+              Types of <span style={{ color: '#2fd838' }}>Submersible Pumps</span>
             </h2>
-            <p className="text-secondary lh-lg">
-              Not every submersible pump suits every job. Here are the main types you will find in the market.
-            </p>
+            <div className="heading-underline mb-4"></div>
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-2">Borewell / Tubewell Submersible Pumps</h3>
             <p className="text-secondary lh-lg">
-              These are the most common type of tubewell water pump in Pakistan. Farmers use them to draw water from deep agricultural wells for irrigation. They come in narrow diameters so they fit tightly inside standard borewell casings.
+              These are the most common type of tubewell water pump in Pakistan. Farmers use them to draw water from deep agricultural wells for irrigation.
             </p>
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-2">Sewage &amp; Wastewater Submersible Pumps</h3>
             <p className="text-secondary lh-lg">
-              These pumps move dirty water, sludge, or waste instead of clean water. Factories, housing societies, and treatment plants rely on them to clear wastewater without clogging.
+              These pumps move dirty water, sludge, or waste instead of clean water for housing societies and industrial plants.
             </p>
 
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Sand-Resistant Submersible Pumps (for high-silt water)</h3>
+            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Sand-Resistant Submersible Pumps</h3>
             <p className="text-secondary lh-lg">
-              Many parts of Pakistan have water with a high sand or silt content. A sand resistant submersible pump uses hardened components that resist wear from grit passing through the motor and impellers. If you skip this feature in a sandy area, your pump will fail within months.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Residential Submersible Pumps</h3>
-            <p className="text-secondary lh-lg">
-              These are smaller units built for homes, built to lift water from a shallow borewell into your overhead tank. They run on lower horsepower and cost less to operate day to day.
+              Uses hardened components that resist wear from sand or silt content in the water table.
             </p>
           </section>
 
           {/* Section 3: Buying Guide */}
           <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              How to Choose the Right Submersible Pump (Buying Guide)
+            <h2 className="fw-bold text-dark h3 mb-2">
+              How to Choose <span style={{ color: '#2fd838' }}>The Right Pump</span>
             </h2>
-            <p className="text-secondary lh-lg">
-              Picking the best submersible pump for tubewell or home use comes down to a few key factors. Get these right, and your pump will run for years without trouble.
-            </p>
+            <div className="heading-underline mb-4"></div>
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-2">Calculating HP Based on Well Depth &amp; Water Requirement</h3>
             <p className="text-secondary lh-lg">
-              The depth of your well and how much water you need decide the horsepower you should buy.
-            </p>
-            <ul>
-              <li className="text-secondary mb-2">Shallow domestic borewells usually need lower horsepower.</li>
-              <li className="text-secondary mb-2">Deep agricultural tubewells need much higher horsepower to lift water that far.</li>
-              <li className="text-secondary mb-2">A wrong HP choice either wastes energy or fails to deliver enough water.</li>
-            </ul>
-            <p className="text-secondary lh-lg">
-              Always measure your total well depth and expected daily water use before choosing a model.
+              Shallow domestic borewells usually need 1-3HP, while deep agricultural tubewells need 5-15HP+ to lift water efficiently.
             </p>
 
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Discharge Rate (GPM/LPM) — Matching Pump to Farm/Home Size</h3>
-            <p className="text-secondary lh-lg">
-              Discharge rate tells you how much water the pump moves per minute. A large farm needs a high discharge rate to irrigate crops on time. A small home needs a much lower rate, since daily use stays limited.
-            </p>
+            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Stainless Steel vs Cast Iron Body</h3>
             <ul>
-              <li className="text-secondary mb-2">Match your discharge rate to your crop type and farm size.</li>
-              <li className="text-secondary mb-2">For homes, match it to your tank size and family needs.</li>
-              <li className="text-secondary mb-2">Buying more capacity than you need only raises your running cost.</li>
-            </ul>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Bore Diameter &amp; Pump Size Compatibility</h3>
-            <p className="text-secondary lh-lg">
-              Your borewell diameter limits which pump size fits inside it. Measure your casing pipe diameter first, then pick a pump that fits with enough clearance. A pump that is too wide simply will not go down the well.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Stainless Steel vs Cast Iron Body — Which Lasts Longer?</h3>
-            <ul>
-              <li className="text-secondary mb-2"><strong>Stainless steel bodies</strong> resist rust and corrosion, so they last longer in most water conditions.</li>
-              <li className="text-secondary mb-2"><strong>Cast iron bodies</strong> cost less upfront but wear down faster in corrosive or mineral-heavy water.</li>
-              <li className="text-secondary mb-2">For long-term use, especially in agricultural areas, stainless steel is worth the extra investment.</li>
+              <li className="text-secondary mb-2"><strong>Stainless steel bodies</strong> resist rust and corrosion, lasting longer in heavy mineral water.</li>
+              <li className="text-secondary mb-2"><strong>Cast iron bodies</strong> cost less upfront but wear down faster in corrosive environments.</li>
             </ul>
           </section>
 
           {/* Section 4: Price */}
           <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              Submersible Pump Price in Pakistan in 2026
+            <h2 className="fw-bold text-dark h3 mb-2">
+              Submersible Pump <span style={{ color: '#2fd838' }}>Price in Pakistan</span>
             </h2>
+            <div className="heading-underline mb-4"></div>
             <p className="text-secondary lh-lg">
-              Pricing for a submersible water pump depends on many factors, and it changes often based on market conditions. Instead of quoting numbers that go outdated fast, we recommend reaching out to our team directly for a current, accurate quote based on your exact needs.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Price by HP (3HP, 5HP, 7.5HP, 10HP, 15HP+)</h3>
-            <p className="text-secondary lh-lg">
-              Every horsepower range serves a different purpose, from small homes to large farms. The right HP for your setup depends on well depth, discharge needs, and daily usage, not just budget.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Factors That Affect Price (Brand, Cable Length, Panel, Import vs Local)</h3>
-            <p className="text-secondary lh-lg">Several factors shift the final cost of a submersible pump setup:</p>
-            <ul>
-              <li className="text-secondary mb-2">Brand reputation and build quality</li>
-              <li className="text-secondary mb-2">Length and thickness of the power cable</li>
-              <li className="text-secondary mb-2">Whether you need a control panel or starter</li>
-              <li className="text-secondary mb-2">Imported units versus locally assembled models</li>
-            </ul>
-            <p className="text-secondary lh-lg">
-              Talk to our team so we can guide you toward the setup that fits your budget and your well.
+              Pricing depends on horsepower, brand reputation, cable length, and control panel configurations. Reach out to our team directly for an up-to-date quote tailored to your exact depth requirements.
             </p>
           </section>
 
           {/* Section 5: Installation Guide */}
           <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              Submersible Pump Installation Guide: Step by Step
+            <h2 className="fw-bold text-dark h3 mb-2">
+              Installation <span style={{ color: '#2fd838' }}>Guide</span>
             </h2>
-            <p className="text-secondary lh-lg">
-              Correct installation protects your investment and keeps the pump running smoothly for years.
-            </p>
+            <div className="heading-underline mb-4"></div>
 
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Pre-Installation Checklist (Casing, Cable, Control Panel)</h3>
-            <ul>
-              <li className="text-secondary mb-2">Confirm the borewell casing is clean and free of debris.</li>
-              <li className="text-secondary mb-2">Check the cable length matches your well depth with some extra slack.</li>
-              <li className="text-secondary mb-2">Test the control panel and starter before connecting the pump.</li>
-            </ul>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Correct Installation Depth &amp; Positioning</h3>
-            <p className="text-secondary lh-lg">
-              Lower the pump to a depth that keeps it fully submerged, even when the water table drops in dry months. Never place it too close to the bottom, since sediment collects there and can damage the motor.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Wiring &amp; Control Panel Setup</h3>
-            <p className="text-secondary lh-lg">
-              Connect the motor cable to the control panel using the correct wire gauge for your HP rating. Loose or undersized wiring causes voltage drops, which strain the motor and shorten its life.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Common Installation Mistakes That Damage the Motor</h3>
             <div className="alert alert-warning border-0 shadow-sm rounded-3 p-3">
-              <ul className="mb-0">
-                <li className="mb-2">Installing the pump too shallow, causing it to run dry during low water periods</li>
-                <li className="mb-2">Using cheap or undersized cable that overheats</li>
-                <li className="mb-2">Skipping a voltage stabilizer in areas with fluctuating power</li>
-                <li className="mb-0">Failing to secure the pump properly, causing it to shift or drop</li>
+              <h5 className="fw-bold h6">Common Mistakes to Avoid:</h5>
+              <ul className="mb-0 small">
+                <li className="mb-1">Installing the pump too shallow, causing dry-run motor burn</li>
+                <li className="mb-1">Using cheap undersized cable that leads to voltage drops</li>
+                <li className="mb-0">Skipping a voltage stabilizer in high-fluctuation areas</li>
               </ul>
             </div>
           </section>
 
-          {/* Section 6: Submersible vs Turbine */}
+          {/* Section 6: Maintenance & Lifespan */}
           <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              Submersible Pump vs Turbine Pump: Which One Do You Need?
+            <h2 className="fw-bold text-dark h3 mb-2">
+              Maintenance &amp; <span className="text-accent-green">Lifespan Tips</span>
             </h2>
+            <div className="heading-underline mb-4"></div>
             <p className="text-secondary lh-lg">
-              Both pumps move water from underground, but they suit different situations. A submersible pump works fully underwater and fits narrow borewells, making it ideal for most tubewells and homes. A turbine pump uses a vertical shaft connected to a motor above ground, and it suits very large-scale irrigation where you need extremely high water volumes.
-            </p>
-            <p className="text-secondary lh-lg">
-              If your well is standard size and you want lower upfront cost, choose a submersible unit. If you run a large farm and need to move huge volumes of water constantly, a turbine setup may serve you better.
+              Install dry-run protection and voltage stabilizers to ensure your pump serves your farm or home for over a decade.
             </p>
           </section>
 
-          {/* Section 7: Maintenance */}
-          <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              Maintenance &amp; Lifespan Tips
-            </h2>
-            <p className="text-secondary lh-lg">
-              A little regular care keeps your submersible pump running strong for years.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Signs Your Submersible Pump Needs Servicing</h3>
-            <ul>
-              <li className="text-secondary mb-2">Water flow drops noticeably compared to before</li>
-              <li className="text-secondary mb-2">The motor makes unusual noises or vibrations</li>
-              <li className="text-secondary mb-2">Power consumption rises without any change in usage</li>
-              <li className="text-secondary mb-2">Water comes out cloudy or carries visible sediment</li>
-            </ul>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">How to Extend Pump Life (Dry-Run Protection, Voltage Stabilizers)</h3>
-            <ul>
-              <li className="text-secondary mb-2">Install a dry-run protection device so the pump shuts off if water runs out.</li>
-              <li className="text-secondary mb-2">Use a voltage stabilizer to protect the motor from power fluctuations.</li>
-              <li className="text-secondary mb-2">Schedule a professional inspection at least once a year.</li>
-              <li className="text-secondary mb-2">Clean the borewell casing periodically to reduce sediment buildup.</li>
-            </ul>
-          </section>
-
-          {/* Section 8: Why Asian Pumps */}
+          {/* Section 7: Why Asian Pumps */}
           <section className="mb-5 p-4 rounded-3 bg-light border">
-            <h2 className="fw-bold text-dark h3 mb-3">
-              Why Choose Asian Pumps for Submersible Pumps in Pakistan
+            <span className="sub-badge d-block mb-1">Why Choose Us</span>
+            <h2 className="fw-bold text-dark h3 mb-2">
+              Asian Pumps <span className="text-accent-green">Pakistan</span>
             </h2>
+            <div className="heading-underline mb-4"></div>
 
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">50+ Years of Manufacturing Experience</h3>
             <p className="text-secondary lh-lg">
-              We have worked in the water pumping industry since 1974. Over the decades, we have built pumps for farms, factories, and homes across the country, and we understand exactly what Pakistani water conditions demand.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Direct Collaboration with Turkish Manufacturers</h3>
-            <p className="text-secondary lh-lg">
-              We work directly with Turkish manufacturers to bring high-quality engineering to our customers. This partnership lets us offer pumps built to strict standards, without unnecessary middlemen driving up costs.
-            </p>
-
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Trusted by WAPDA, Government &amp; Industrial Clients</h3>
-            <p className="text-secondary lh-lg">
-              Organizations like WAPDA, SNGPL, and various government bodies have trusted us for their water pumping needs. Our client list also includes major industrial names, which reflects the reliability we bring to every project, big or small.
-            </p>
-          </section>
-
-          {/* Conclusion */}
-          <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-3">Conclusion</h2>
-            <p className="text-secondary lh-lg">
-              Choosing the right submersible pump in Pakistan comes down to knowing your well depth, water needs, and site conditions. Whether you run a farm, a home, or an industrial site, the right pump saves you money and headaches for years to come. At Asian Pumps, we bring over 50 years of experience to help you pick, install, and maintain the perfect pump for your needs. Reach out to our team today for a free consultation, and let us help you find the submersible pump that fits your exact requirement.
+              With 50+ years of manufacturing expertise, direct collaboration with premier Turkish suppliers, and trusted ongoing partnerships with WAPDA and government clients, Asian Pumps delivers reliability built for local conditions.
             </p>
           </section>
 
           <hr className="my-5" />
 
-          {/* New 2-Column Grid FAQ Section */}
+          {/* Styled FAQ Grid with Hover Effect */}
           <section className="mb-5" id="faqs">
-            <h2 className="fw-bold text-dark h3 mb-4 text-center">
-              Frequently Asked Questions (FAQs)
-            </h2>
+            <div className="text-center mb-5">
+              <span className="sub-badge d-block mb-1">Got Questions?</span>
+              <h2 className="fw-bold text-dark h3 mb-2">
+                Frequently Asked <span style={{ color: '#2fd838' }}>Questions</span>
+              </h2>
+              <div className="heading-underline mx-auto"></div>
+            </div>
 
             <div className="row g-4">
               {faqs.map((faq, index) => (
                 <div className="col-md-6" key={index}>
-                  <div className="p-4 bg-light rounded-3 border h-100 shadow-sm">
+                  <div className="p-4 bg-light rounded-3 border h-100 shadow-sm faq-card">
                     <h5 className="fw-bold text-dark mb-3 h6">
                       {faq.q}
                     </h5>
