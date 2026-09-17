@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -36,8 +36,17 @@ function App() {
           {/* Main single-page home layout */}
           <Route path="/" element={<HomePage />} />
 
-          
-          <Route path="/blog" element={<Blog />} />
+          {/* 1. SEO Unique Article Route */}
+          <Route 
+            path="/blog/submersible-pumps-in-pakistan-buying-guide" 
+            element={<Blog />} 
+          />
+
+          {/* 2. Old /blog URL redirects automatically to the new SEO URL */}
+          <Route 
+            path="/blog" 
+            element={<Navigate to="/blog/submersible-pumps-in-pakistan-buying-guide" replace />} 
+          />
         </Routes>
         <Footer />
       </div>

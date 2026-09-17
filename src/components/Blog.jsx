@@ -50,12 +50,12 @@ const Blog = () => {
           font-size: 0.85rem;
         }
         .text-accent-green {
-          color: #22c55e !important;
+          color: #2fd838 !important;
         }
         .heading-underline {
           width: 60px;
           height: 4px;
-          background-color: #22c55e;
+          background-color: #2fd838;
           border-radius: 2px;
         }
         .faq-card {
@@ -65,7 +65,7 @@ const Blog = () => {
         .faq-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
-          border-left: 4px solid #22c55e !important;
+          border-left: 4px solid #2fd838 !important;
         }
       `}</style>
 
@@ -82,6 +82,9 @@ const Blog = () => {
           content="Complete guide to submersible pumps in Pakistan types, HP selection, and installation tips. Get expert advice from Asian Pumps today." 
         />
         <meta property="og:type" content="article" />
+        
+        {/* Canonical Link for Individual Article SEO */}
+        <link rel="canonical" href="https://asianpumpspk.com/blog/submersible-pumps-in-pakistan-buying-guide" />
       </Helmet>
 
       {/* 2. Main Article Content */}
