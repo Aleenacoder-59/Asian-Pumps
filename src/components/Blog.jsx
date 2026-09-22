@@ -83,7 +83,6 @@ const Blog = () => {
         />
         <meta property="og:type" content="article" />
         
-        {/* Canonical Link for Individual Article SEO */}
         <link rel="canonical" href="https://asianpumpspk.com/blog/submersible-pumps-in-pakistan-buying-guide" />
       </Helmet>
 
@@ -105,7 +104,7 @@ const Blog = () => {
               The submersible pumps in Pakistan is one of the smartest investments you can make for your farm, home, or industry. If you deal with low water tables, deep borewells, or unreliable water supply, this guide will help you understand everything before you buy or install one.
             </p>
             <p className="text-muted fs-6 text-start">
-              At <strong>Asian Pumps</strong>, we get calls every day from farmers, homeowners, and industry owners who ask the same questions. Which pump fits my well? How much power do I need? What goes wrong during installation? This guide answers all of it in plain, simple language.
+              At Asian Pumps, we get calls every day from farmers, homeowners, and industry owners who ask the same questions. Which pump fits my well? How much power do I need? What goes wrong during installation? This guide answers all of it in plain, simple language.
             </p>
           </header>
 
@@ -129,7 +128,7 @@ const Blog = () => {
             <div className="heading-underline mb-4"></div>
 
             <p className="text-secondary lh-lg">
-              The submersible pumps in Pakistan sits fully underwater, inside a borewell or tank, and pushes water up through a pipe to the surface. Unlike other pumps that pull water, a submersible pump pushes it, which makes it far more efficient for deep wells.
+              The  <a href="https://asianpumpspk.com/" target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>submersible pumps in Pakistan</a> sits fully underwater, inside a borewell or tank, and pushes water up through a pipe to the surface. Unlike other pumps that pull water, a submersible pump pushes it, which makes it far more efficient for deep wells.
             </p>
             <p className="text-secondary lh-lg">
               The pump has a sealed motor connected to a series of impellers. Once you switch it on, the motor spins the impellers, and they force water upward through the pipe. Since the whole unit stays submerged, it stays cool and runs quietly.

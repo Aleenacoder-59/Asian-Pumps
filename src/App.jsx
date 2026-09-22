@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,8 +12,9 @@ import Clients from './components/Clients.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
-// Import Blog component from components
+import BlogList from './components/BlogList.jsx';
 import Blog from './components/Blog.jsx';
+import SecondBlog from './components/SecondBlog.jsx';
 
 function HomePage() {
   return (
@@ -33,20 +35,14 @@ function App() {
       <div className="App">
         <HeaderWrapper />
         <Routes>
-          {/* Main single-page home layout */}
           <Route path="/" element={<HomePage />} />
 
-          {/* 1. SEO Unique Article Route */}
-          <Route 
-            path="/blog/submersible-pumps-in-pakistan-buying-guide" 
-            element={<Blog />} 
-          />
+          {/* Main Blog Listing Page */}
+          <Route path="/blog" element={<BlogList />} />
 
-          {/* 2. Old /blog URL redirects automatically to the new SEO URL */}
-          <Route 
-            path="/blog" 
-            element={<Navigate to="/blog/submersible-pumps-in-pakistan-buying-guide" replace />} 
-          />
+          {/* Individual Article Routes */}
+          <Route path="/blog/submersible-pumps-in-pakistan-buying-guide" element={<Blog />} />
+          <Route path="/blog/centrifugal-pumps-pakistan-industrial-fire-fighting-use" element={<SecondBlog />} />
         </Routes>
         <Footer />
       </div>
