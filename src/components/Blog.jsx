@@ -96,7 +96,7 @@ const Blog = () => {
               Buying &amp; Installation Guide
             </span>
             <h1 className="fw-black text-dark display-5 mb-3">
-              Submersible Pumps in <span style={{ color: '#2fd838' }}>Pakistan</span>
+            Submersible Pumps in Pakistan:   <span style={{ color: '#2fd838' }}>Complete Buying and Installation Guidee</span>
             </h1>
             <div className="heading-underline mx-auto mb-4"></div>
             
