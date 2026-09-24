@@ -26,6 +26,18 @@ body {
   25% { color: #e30a17; } 
   50% { color:  #2fd838;; } 
   75% { color:  #0b4a99; } }
+@keyframes pulseZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Adjust zoom size if needed (e.g., 1.08 for larger zoom) */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 
 .announcement-text {

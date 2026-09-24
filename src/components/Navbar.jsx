@@ -55,17 +55,47 @@ const MyNavbar = () => {
 
     return (
         <>
-            <div className="announcement-bar w-100 d-flex justify-content-center align-items-center bg-white">
-                <img
-                    className='announcement-img'
-                    src="/turkey.png"
-                    alt="Turkish Flag"
-                />
-                <span className="text-uppercase tracking-wider announcement-text">
-                    Official Distributor of Premium Turkish Products
-                </span>
-            </div>
+    <div className="announcement-wrapper w-100">
+  <style>{`
+    @keyframes pulseZoom {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.06);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
+    .zoom-text {
+      display: inline-block !important;
+      animation: pulseZoom 1.8s ease-in-out infinite !important;
+      transform-origin: center center;
+      color: #0f172a;
+    }
+  `}</style>
+
+  {/* Solar Announcement Bar (Top) */}
+  <div className="announcement-bar w-100 d-flex justify-content-center align-items-center bg-white py-1">
+    <span className="text-uppercase tracking-wider announcement-text zoom-text fw-bold">
+      ☀️ Introducing Solar Panels &amp; Solar Energy Systems — Launching Soon!
+    </span>
+  </div>
+
+  {/* Turkish Distributor Announcement Bar (Bottom) */}
+  <div className="announcement-bar w-100 d-flex justify-content-center align-items-center bg-white py-1">
+    <img
+      className="announcement-img me-2"
+      src="/turkey.png"
+      alt="Turkish Flag"
+    />
+    <span className="text-uppercase tracking-wider announcement-text">
+      Official Distributor of Premium Turkish Products
+    </span>
+  </div>
+</div>
             <Navbar
                 expanded={isMenuOpen}
                 onToggle={handleToggle}
