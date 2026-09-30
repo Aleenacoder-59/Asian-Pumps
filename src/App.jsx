@@ -15,7 +15,7 @@ import Footer from './components/Footer.jsx';
 import BlogList from './components/BlogList.jsx';
 import Blog from './components/Blog.jsx';
 import SecondBlog from './components/SecondBlog.jsx';
-
+import ThirdBlog from './components/ThirdBlog';
 function HomePage() {
   return (
     <>
@@ -43,6 +43,10 @@ function App() {
           {/* Individual Article Routes */}
           <Route path="/blog/submersible-pumps-in-pakistan-buying-guide" element={<Blog />} />
           <Route path="/blog/centrifugal-pumps-pakistan-industrial-fire-fighting-use" element={<SecondBlog />} />
+          <Route 
+    path="/blog/best-water-pumps-in-lahore-2026-buyers-guide" 
+    element={<ThirdBlog />} 
+  />
         </Routes>
         <Footer />
       </div>
