@@ -38,9 +38,51 @@ const Blog = () => {
     }
   ];
 
+  const canonicalUrl = "https://asianpumpspk.com/blog/submersible-pumps-in-pakistan-buying-guide";
+  const imageUrl = "https://asianpumpspk.com/assets/Submersible-pumps.jpeg";
+
+  // Structured Data Schema
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalUrl
+    },
+    "headline": "Submersible Pumps in Pakistan: Complete Buying and Installation Guide",
+    "description": "Complete guide to submersible pumps in Pakistan: types, HP selection, and installation tips. Get expert advice from Asian Pumps today.",
+    "image": imageUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "Asian Pumps Pvt. Ltd."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Asian Pumps Pvt. Ltd.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://asianpumpspk.com/Asian-pumps-logo.png"
+      }
+    },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-10-01"
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   return (
     <>
-      {/* Custom Styles for Heading Colors & FAQ Hover */}
       <style>{`
         .sub-badge {
           color: #1d4ed8;
@@ -69,46 +111,54 @@ const Blog = () => {
         }
       `}</style>
 
-      {/* 1. SEO Meta Tags */}
+      {/* SEO Meta Tags & Schema */}
       <Helmet>
         <title>Submersible Pumps in Pakistan: Buying and Installation Guide</title>
         <meta 
           name="description" 
           content="Complete guide to submersible pumps in Pakistan types, HP selection, and installation tips. Get expert advice from Asian Pumps today." 
         />
-        <meta property="og:title" content="Submersible Pumps in Pakistan: Buying and Installation Guide" />
-        <meta 
-          property="og:description" 
-          content="Complete guide to submersible pumps in Pakistan types, HP selection, and installation tips. Get expert advice from Asian Pumps today." 
-        />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        
-        <link rel="canonical" href="https://asianpumpspk.com/blog/submersible-pumps-in-pakistan-buying-guide" />
+        <meta property="og:title" content="Submersible Pumps in Pakistan: Buying and Installation Guide" />
+        <meta property="og:description" content="Complete guide to submersible pumps in Pakistan types, HP selection, and installation tips." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={imageUrl} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Submersible Pumps in Pakistan: Buying and Installation Guide" />
+        <meta name="twitter:description" content="Complete guide to submersible pumps in Pakistan types, HP selection, and installation tips." />
+        <meta name="twitter:image" content={imageUrl} />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      {/* 2. Main Article Content */}
+      {/* Main Article Content */}
       <article className="py-5 bg-white" id="blog-article">
         <div className="container py-3" style={{ maxWidth: '900px' }}>
           
-          {/* Main Title (H1) */}
           <header className="mb-5 text-center">
             <span className="sub-badge d-block mb-2">
               Buying &amp; Installation Guide
             </span>
             <h1 className="fw-black text-dark display-5 mb-3">
-            Submersible Pumps in Pakistan:   <span style={{ color: '#2fd838' }}>Complete Buying and Installation Guidee</span>
+              Submersible Pumps in Pakistan: <span style={{ color: '#2fd838' }}>Complete Buying and Installation Guide</span>
             </h1>
             <div className="heading-underline mx-auto mb-4"></div>
             
             <p className="text-muted fs-5 lh-base text-start mt-4">
-              The submersible pumps in Pakistan is one of the smartest investments you can make for your farm, home, or industry. If you deal with low water tables, deep borewells, or unreliable water supply, this guide will help you understand everything before you buy or install one.
+              Investing in submersible pumps in Pakistan is one of the smartest decisions for your farm, home, or industry. If you deal with low water tables, deep borewells, or an unreliable water supply, this guide will help you understand everything before you buy or install one.
             </p>
             <p className="text-muted fs-6 text-start">
-              At Asian Pumps, we get calls every day from farmers, homeowners, and industry owners who ask the same questions. Which pump fits my well? How much power do I need? What goes wrong during installation? This guide answers all of it in plain, simple language.
+              At Asian Pumps, we receive inquiries daily from farmers, homeowners, and industry leaders asking which pump fits their well, how much horsepower is needed, and how to avoid installation pitfalls. This guide addresses each question step-by-step.
             </p>
           </header>
 
-          {/* Featured Article Image */}
           <div className="mb-5 text-center">
             <img 
               src={blog1Image} 
@@ -120,7 +170,7 @@ const Blog = () => {
 
           <hr className="my-5" />
 
-          {/* Section 1: What is a Submersible Pump */}
+          {/* Section 1 */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
               What Is a Submersible Pump &amp; <span style={{ color: '#2fd838' }}>How It Works</span>
@@ -128,27 +178,27 @@ const Blog = () => {
             <div className="heading-underline mb-4"></div>
 
             <p className="text-secondary lh-lg">
-              The  <a href="https://asianpumpspk.com/" target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>submersible pumps in Pakistan</a> sits fully underwater, inside a borewell or tank, and pushes water up through a pipe to the surface. Unlike other pumps that pull water, a submersible pump pushes it, which makes it far more efficient for deep wells.
+              A <a href="https://asianpumpspk.com/" target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>submersible pump in Pakistan</a> sits fully underwater inside a borewell or tank, pushing water up through a pipe to the surface. Unlike surface pumps that pull water, submersible units push it, making them significantly more efficient for deep wells.
             </p>
             <p className="text-secondary lh-lg">
-              The pump has a sealed motor connected to a series of impellers. Once you switch it on, the motor spins the impellers, and they force water upward through the pipe. Since the whole unit stays submerged, it stays cool and runs quietly.
+              The pump consists of a hermetically sealed motor attached to a series of impellers. When energized, the motor spins the impellers, forcing water upward. Because the entire unit remains submerged, it stays cool during continuous operation and runs quietly.
             </p>
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-3">
               Multi-Stage Impeller Technology Explained
             </h3>
             <p className="text-secondary lh-lg">
-              Most submersible water pumps use multiple impeller stages stacked on top of each other. Each stage adds more pressure to the water before passing it to the next one.
+              Most submersible water pumps feature multi-stage impellers stacked vertically. Each stage boosts the water pressure before passing it to the next.
             </p>
             <ul className="list-group list-group-flush mb-3">
               <li className="list-group-item bg-transparent ps-0 text-secondary">
-                ✔ <strong>More stages</strong> mean more lifting power for deeper wells.
+                ✔ <strong>More stages</strong> deliver higher head pressure for deeper wells.
               </li>
               <li className="list-group-item bg-transparent ps-0 text-secondary">
-                ✔ <strong>Each stage</strong> boosts pressure without needing a bigger motor.
+                ✔ <strong>Each stage</strong> increases pressure without requiring an oversized motor.
               </li>
               <li className="list-group-item bg-transparent ps-0 text-secondary">
-                ✔ <strong>This design</strong> lets the pump reach depths a single-stage pump cannot handle.
+                ✔ <strong>Optimized engineering</strong> allows deep-water extraction beyond standard pump limits.
               </li>
             </ul>
 
@@ -157,18 +207,18 @@ const Blog = () => {
             </h3>
             <ul className="list-group list-group-flush mb-3">
               <li className="list-group-item bg-transparent ps-0 text-secondary">
-                🔹 <strong>A surface pump</strong> sits above ground and pulls water up, so it struggles once the well gets too deep.
+                🔹 <strong>Surface pumps:</strong> Positioned above ground; limited by suction lift capacity.
               </li>
               <li className="list-group-item bg-transparent ps-0 text-secondary">
-                🔹 <strong>A submersible pump</strong> sits inside the water and pushes it up, so it handles depth much better.
+                🔹 <strong>Submersible pumps:</strong> Submerged directly in the water table; push water efficiently from depth.
               </li>
               <li className="list-group-item bg-transparent ps-0 text-secondary">
-                🔹 <strong>Submersible pumps</strong> run silently because water around them muffles the sound.
+                🔹 <strong>Noise reduction:</strong> Water surrounding the pump dampens operational sound completely.
               </li>
             </ul>
           </section>
 
-          {/* Section 2: Types */}
+          {/* Section 2 */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
               Types of <span style={{ color: '#2fd838' }}>Submersible Pumps</span>
@@ -177,79 +227,79 @@ const Blog = () => {
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-2">Borewell / Tubewell Submersible Pumps</h3>
             <p className="text-secondary lh-lg">
-              These are the most common type of tubewell water pump in Pakistan. Farmers use them to draw water from deep agricultural wells for irrigation.
+              The primary choice for agricultural applications in Pakistan, engineered to pull water from deep underground water tables for irrigation.
             </p>
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-2">Sewage &amp; Wastewater Submersible Pumps</h3>
             <p className="text-secondary lh-lg">
-              These pumps move dirty water, sludge, or waste instead of clean water for housing societies and industrial plants.
+              Designed with heavy-duty impellers to handle wastewater, slurry, and solids for housing societies and industrial plants.
             </p>
 
             <h3 className="fw-bold text-dark h5 mt-4 mb-2">Sand-Resistant Submersible Pumps</h3>
             <p className="text-secondary lh-lg">
-              Uses hardened components that resist wear from sand or silt content in the water table.
+              Constructed with hardened materials to resist wear caused by sandy or silty water beds.
             </p>
           </section>
 
-          {/* Section 3: Buying Guide */}
+          {/* Section 3 */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
               How to Choose <span style={{ color: '#2fd838' }}>The Right Pump</span>
             </h2>
             <div className="heading-underline mb-4"></div>
 
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Calculating HP Based on Well Depth &amp; Water Requirement</h3>
+            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Calculating HP Based on Well Depth &amp; Flow Rate</h3>
             <p className="text-secondary lh-lg">
-              Shallow domestic borewells usually need 1-3HP, while deep agricultural tubewells need 5-15HP+ to lift water efficiently.
+              Shallow residential wells typically require 1 to 3 HP, whereas deep agricultural tubewells demand 5 to 15+ HP depending on the required discharge flow (GPM/LPM) and total dynamic head.
             </p>
 
-            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Stainless Steel vs Cast Iron Body</h3>
+            <h3 className="fw-bold text-dark h5 mt-4 mb-2">Stainless Steel vs Cast Iron Construction</h3>
             <ul>
-              <li className="text-secondary mb-2"><strong>Stainless steel bodies</strong> resist rust and corrosion, lasting longer in heavy mineral water.</li>
-              <li className="text-secondary mb-2"><strong>Cast iron bodies</strong> cost less upfront but wear down faster in corrosive environments.</li>
+              <li className="text-secondary mb-2"><strong>Stainless Steel:</strong> Provides high resistance to corrosion and scaling, recommended for high-salinity water.</li>
+              <li className="text-secondary mb-2"><strong>Cast Iron:</strong> Economical choice for standard freshwater applications with neutral pH.</li>
             </ul>
           </section>
 
-          {/* Section 4: Price */}
+          {/* Section 4 */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
               Submersible Pump <span style={{ color: '#2fd838' }}>Price in Pakistan</span>
             </h2>
             <div className="heading-underline mb-4"></div>
             <p className="text-secondary lh-lg">
-              Pricing depends on horsepower, brand reputation, cable length, and control panel configurations. Reach out to our team directly for an up-to-date quote tailored to your exact depth requirements.
+              Pricing depends on power capacity (HP), materials, motor winding quality, and included accessories such as control panels and submersible cables. Contact Asian Pumps directly for customized quotes.
             </p>
           </section>
 
-          {/* Section 5: Installation Guide */}
+          {/* Section 5 */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
-              Installation <span style={{ color: '#2fd838' }}>Guide</span>
+              Installation <span style={{ color: '#2fd838' }}>Guide &amp; Best Practices</span>
             </h2>
             <div className="heading-underline mb-4"></div>
 
             <div className="alert alert-warning border-0 shadow-sm rounded-3 p-3">
-              <h5 className="fw-bold h6">Common Mistakes to Avoid:</h5>
+              <h5 className="fw-bold h6">Critical Errors to Avoid:</h5>
               <ul className="mb-0 small">
-                <li className="mb-1">Installing the pump too shallow, causing dry-run motor burn</li>
-                <li className="mb-1">Using cheap undersized cable that leads to voltage drops</li>
-                <li className="mb-0">Skipping a voltage stabilizer in high-fluctuation areas</li>
+                <li className="mb-1">Installing above the dynamic water level, leading to dry-run motor failure.</li>
+                <li className="mb-1">Using under-gauge electrical wiring causing excessive voltage drop.</li>
+                <li className="mb-0">Omitting protective relays or voltage stabilizers in unstable grid areas.</li>
               </ul>
             </div>
           </section>
 
-          {/* Section 6: Maintenance & Lifespan */}
+          {/* Section 6 */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
-              Maintenance &amp; <span className="text-accent-green">Lifespan Tips</span>
+              Maintenance &amp; <span className="text-accent-green">Lifespan Optimization</span>
             </h2>
             <div className="heading-underline mb-4"></div>
             <p className="text-secondary lh-lg">
-              Install dry-run protection and voltage stabilizers to ensure your pump serves your farm or home for over a decade.
+              Integrating dry-run protection sensors, check valves, and magnetic starters significantly prolongs pump lifespan, allowing efficient operation for over a decade.
             </p>
           </section>
 
-          {/* Section 7: Why Asian Pumps */}
+          {/* Section 7 */}
           <section className="mb-5 p-4 rounded-3 bg-light border">
             <span className="sub-badge d-block mb-1">Why Choose Us</span>
             <h2 className="fw-bold text-dark h3 mb-2">
@@ -257,14 +307,14 @@ const Blog = () => {
             </h2>
             <div className="heading-underline mb-4"></div>
 
-            <p className="text-secondary lh-lg">
-              With 50+ years of manufacturing expertise, direct collaboration with premier Turkish suppliers, and trusted ongoing partnerships with WAPDA and government clients, Asian Pumps delivers reliability built for local conditions.
+            <p className="text-secondary lh-lg mb-0">
+              Backed by over 50 years of engineering expertise, partnerships with global manufacturers, and a strong track record supporting agricultural, commercial, and government infrastructure projects, Asian Pumps offers dependable water management solutions engineered for Pakistan's environment[cite: 1, 2, 3].
             </p>
           </section>
 
           <hr className="my-5" />
 
-          {/* Styled FAQ Grid with Hover Effect */}
+          {/* FAQs */}
           <section className="mb-5" id="faqs">
             <div className="text-center mb-5">
               <span className="sub-badge d-block mb-1">Got Questions?</span>
@@ -278,9 +328,9 @@ const Blog = () => {
               {faqs.map((faq, index) => (
                 <div className="col-md-6" key={index}>
                   <div className="p-4 bg-light rounded-3 border h-100 shadow-sm faq-card">
-                    <h5 className="fw-bold text-dark mb-3 h6">
+                    <h3 className="fw-bold text-dark mb-3 h6">
                       {faq.q}
-                    </h5>
+                    </h3>
                     <p className="text-secondary mb-0 small lh-base">
                       {faq.a}
                     </p>

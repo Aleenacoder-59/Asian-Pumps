@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import NotFound from './components/NotFound.jsx';
 import HeaderWrapper from './components/Headerwrapper.jsx'; 
 import About from './components/About.jsx';
 import Product from './components/Products.jsx';
@@ -37,10 +37,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
 
-          {/* Main Blog Listing Page */}
+          
           <Route path="/blog" element={<BlogList />} />
 
-          {/* Individual Article Routes */}
+          <Route path="*" element={<NotFound />} />
           <Route path="/blog/submersible-pumps-in-pakistan-buying-guide" element={<Blog />} />
           <Route path="/blog/centrifugal-pumps-pakistan-industrial-fire-fighting-use" element={<SecondBlog />} />
           <Route 
