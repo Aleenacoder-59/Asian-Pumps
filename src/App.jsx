@@ -11,7 +11,7 @@ import Collaboration from './components/Collaboration.jsx';
 import Clients from './components/Clients.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-
+import FourthBlog from './components/FourthBlog.jsx';
 import BlogList from './components/BlogList.jsx';
 import Blog from './components/Blog.jsx';
 import SecondBlog from './components/SecondBlog.jsx';
@@ -43,9 +43,10 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/blog/submersible-pumps-in-pakistan-buying-guide" element={<Blog />} />
           <Route path="/blog/centrifugal-pumps-pakistan-industrial-fire-fighting-use" element={<SecondBlog />} />
+          <Route path="/blog/best-water-pumps-in-lahore-2026-buyers-guide"  element={<ThirdBlog />}  />
           <Route 
-    path="/blog/best-water-pumps-in-lahore-2026-buyers-guide" 
-    element={<ThirdBlog />} 
+    path="/blog/turbine-pump-in-lahore-buying-guide" 
+    element={<FourthBlog />} 
   />
         </Routes>
         <Footer />

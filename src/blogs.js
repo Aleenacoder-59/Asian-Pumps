@@ -2,6 +2,7 @@
 import blog1Image from './assets/Submersible pumps.jpeg';
 import blog2Image from './assets/Centrifugal pumps.jpeg';
 import blog3Image from './assets/Bestpump.jpeg';
+import blog4Image from './assets/TurbinBlog.jpeg';
 
 export const blogs = [
   {
@@ -30,5 +31,14 @@ export const blogs = [
     image: blog3Image,
     date: "October 2026",
     readTime: "5 min read"
+  },
+  {
+    id: 4,
+    slug: "turbine-pump-in-lahore-buying-guide",
+    title: "Turbine Pump in Lahore: What to Know Before You Buy",
+    excerpt: "Planning to buy a turbine pump in Lahore? Check depth, bore size, motor type, and supplier tips first. Get expert help from Asian Pumps today...",
+    image: blog4Image,
+    date: "October 2026",
+    readTime: "6 min read"
   }
 ];

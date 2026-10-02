@@ -88,7 +88,7 @@ const ThirdBlog = () => {
             <div className="heading-underline mx-auto mb-4"></div>
             
             <p className="text-muted fs-5 lh-base text-start mt-4">
-              The <a href="https://asianpumpspk.com" target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>best water pumps in Lahore</a> do one simple job. They give you water the moment you turn on the tap. A weak pump leaves you with low pressure, loud noise, and high electricity bills, and no family or business needs that stress.
+              The <a  className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>best water pumps in Lahore</a> do one simple job. They give you water the moment you turn on the tap. A weak pump leaves you with low pressure, loud noise, and high electricity bills, and no family or business needs that stress.
             </p>
             <p className="text-muted fs-6 text-start">
               At <strong>Asian Pumps</strong>, we make and supply pumps for homes, farms, and factories. In this guide, we share what we know, so you can pick the right pump the first time.
@@ -115,7 +115,7 @@ const ThirdBlog = () => {
             <div className="heading-underline mb-4"></div>
 
             <p className="text-secondary lh-lg">
-              Lahore's water level drops every year. Many homes now pull water from deeper bores. Summers run long and hot, and power cuts still hit many areas. The pumps that fit these conditions save you money and headaches, and are considered the best water pumps in Lahore.
+              Lahore's water level drops every year. Many homes now pull water from deeper bores. Summers run long and hot, and power cuts still hit many areas. The pumps that fit these conditions save you money and headaches, and are considered the <a href="https://asianpumpspk.com" target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>best water pumps in Lahore</a>.
             </p>
 
             <p className="fw-bold text-dark mb-2">Keep these points in mind:</p>
