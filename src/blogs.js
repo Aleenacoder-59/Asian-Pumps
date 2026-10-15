@@ -1,9 +1,8 @@
-// src/data/blogs.js
 import blog1Image from './assets/Submersible pumps.jpeg';
 import blog2Image from './assets/Centrifugal pumps.jpeg';
 import blog3Image from './assets/Bestpump.jpeg';
 import blog4Image from './assets/TurbinBlog.jpeg';
-
+import blog5Image from './assets/Solar.jpeg'; 
 export const blogs = [
   {
     id: 1,
@@ -38,6 +37,15 @@ export const blogs = [
     title: "Turbine Pump in Lahore: What to Know Before You Buy",
     excerpt: "Planning to buy a turbine pump in Lahore? Check depth, bore size, motor type, and supplier tips first. Get expert help from Asian Pumps today...",
     image: blog4Image,
+    date: "October 2026",
+    readTime: "6 min read"
+  },
+  {
+    id: 5,
+    slug: "best-solar-water-system-brands-in-pakistan",
+    title: "Best Solar Water System Brands Available in Pakistan",
+    excerpt: "Looking for the best solar water system in Pakistan? Compare top brands and see how Asian Pumps matches the right setup to your home or farm...",
+    image: blog5Image,
     date: "October 2026",
     readTime: "6 min read"
   }
