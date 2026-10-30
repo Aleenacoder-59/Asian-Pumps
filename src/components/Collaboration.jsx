@@ -11,7 +11,7 @@ const Collaboration = () => {
         <Row className="justify-content-center text-center mb-5">
           <Col lg={8}>
             <h4 className="collab-top-label">Global Strategic Alliance</h4>
-            <h2 className="collab-top-title">Direct Collaboration with <span style={{color:'#2fd838'}}>Turkish Manufacturers</span> </h2>
+            <h2 className="collab-top-title">Imported Water Pumps Direct  <span style={{color:'#2fd838'}}>from Turkish Manufacturers</span> </h2>
             <div className="collab-title-underline"></div>
           </Col>
         </Row>
@@ -31,15 +31,15 @@ const Collaboration = () => {
         
           <Col lg={6} className="ps-lg-5">
             <p className="collab-description">
-              We work directly with established manufacturers in Turkey to ensure consistent quality, transparent sourcing, and competitive pricing.
+              Asian Pumps works directly with established manufacturers in Turkey to bring quality water pumps to Pakistan at competitive prices, with consistent quality and transparent sourcing.
             </p>
 
             <div className="collab-list">
               {[
-                "Factory-level sourcing",
+                "Factory-direct sourcing of water pumps",
                 "Strict quality control standards",
-                "Certified machinery and genuine parts",
-                "Cost-efficient procurement"
+                "Certified machinery and genuine spare parts",
+                "Affordable water pump prices in Pakistan"
               ].map((item, index) => (
                 <div key={index} className="collab-item">
                   <div className="collab-dot"></div>

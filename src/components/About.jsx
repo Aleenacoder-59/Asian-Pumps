@@ -48,7 +48,7 @@ const About = () => {
              About US
             </h4>
             <h2 className="text-black display-5 fw-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              Our Legacy of <span style={{ color: '#2fd838' }}>Excellence</span> 
+              Pakistan's Trusted Water <br /> Pump  <span style={{ color: '#2fd838' }}>Company Since 1974</span> 
             </h2>
             <div 
               className="mx-auto mt-3" 

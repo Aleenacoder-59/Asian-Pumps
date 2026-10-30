@@ -77,10 +77,10 @@ const MyNavbar = () => {
     }
   `}</style>
 
-  {/* Solar Announcement Bar (Top) */}
+
   <div className="announcement-bar w-100 d-flex justify-content-center align-items-center bg-white py-1">
     <span className="text-uppercase tracking-wider announcement-text zoom-text fw-bold">
-      Introducing Solar Panels &amp; Solar Energy Systems — Launching Soon!
+      We've Launched Solar Panels &amp; Solar Energy Systems. Get a Free Quote Today!
     </span>
   </div>
 

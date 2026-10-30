@@ -2,8 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://asianpumpspk.com/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://asianpumpspk.com/blog</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asianpumpspk.com/blog/submersible-pumps-in-pakistan-buying-guide</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://asianpumpspk.com/blog/centrifugal-pumps-pakistan-industrial-fire-fighting-use</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://asianpumpspk.com/blog/best-water-pumps-in-lahore-2026-buyers-guide</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://asianpumpspk.com/blog/turbine-pump-in-lahore-buying-guide</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

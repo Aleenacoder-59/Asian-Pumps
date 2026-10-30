@@ -60,9 +60,7 @@ const Hero = () => {
             </h2>
 
             <p className="hero-description text-black">
-              Delivering innovative and high-quality water pumping solutions
-              across Pakistan since 1974. Serving industrial, commercial, and
-              residential sectors with precision and reliability.
+              Asian Pumps delivers high-quality submersible pumps, centrifugal pumps, turbine pumps and solar water pumping systems across Pakistan since 1974. We serve industrial, commercial, agricultural and residential customers with reliable pumps at the best prices.
             </p>
 
             <div className="hero-tags text-black">

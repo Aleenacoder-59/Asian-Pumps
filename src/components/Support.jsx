@@ -19,14 +19,14 @@ const Support = () => {
               </h4>
               
               <h2 className="display-5 fw-bold text-dark mb-4" style={{ lineHeight: '1.2' }}>
-                Repair <span style={{ color: '#2fd838' }}> & Installation</span> <br />
+              Water Pump Repair <span style={{ color: '#2fd838' }}> & Installation in Pakistan</span> <br />
               
               </h2>
 
               <div className="text-secondary mb-4" style={{ fontSize: '1.05rem' }}>
-                <p className="mb-3">We offer prompt installations of new pumping systems at your site.</p>
-                <p className="mb-3">Our team provides a complete guarantee and after-sales maintenance services 24/7 via qualified and trained technicians.</p>
-                <p className="mb-4">We ensure complete warranty and technical support after sales as mentioned in the work order.</p>
+                <p className="mb-3">We offer fast installations of new pumping systems at your site , including submersible pumps, booster pumps and tube well pumps..</p>
+                <p className="mb-3">Our qualified and trained technicians provide complete warranty and 24/7 after-sales maintenance and pump repair services.</p>
+                <p className="mb-4">Warranty and technical support are provided as mentioned in the work order.</p>
               </div>
 
               <Button 

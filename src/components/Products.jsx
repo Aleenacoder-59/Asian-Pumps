@@ -9,6 +9,7 @@ import Drill from '/src/assets/Drill.jpg';
 import centrifugal from '/src/assets/centrifugal.jpg';
 import residential from '/src/assets/residential.jpg';
 import electrical from '/src/assets/electrical.jpg';
+import SolarEnergy from '/src/assets/Solarenergy.jpeg';
 const Products = () => {
   const [show, setShow] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
@@ -45,63 +46,70 @@ const Products = () => {
       type: "Product", 
       img: pump,
       specs: { head: "Up to 200m", flow: "15-300 m³/h", power: "5HP - 150HP", material: "SS 304/316" },
-      desc: "Precision-engineered for deep-well extraction. Features sand-resistant technology and multi-stage impellers for maximum efficiency."
+      desc: "Submersible pumps and motors for deep tube wells and bores."
     },
     { 
       title: "Solar Water Systems", 
       type: "Service", 
       img: solar,
       specs: { panels: "Tier-1 Mono Perc", efficiency: "98% Inverter", tracking: "Manual/Auto", life: "25 Years" },
-      desc: "High-efficiency sustainable energy solutions. We provide complete solar integration for agricultural tube wells and industrial water supply."
+      desc: "High-efficiency solar water systems for agricultural tube wells and industrial water supply"
     },
     { 
       title: "Turbine Pumps", 
       type: "Product", 
       img: turbine,
       specs: { design: "Vertical Multi-Stage", cooling: "Water/Oil Cooled", duty: "Continuous S1", rpm: "1450" },
-      desc: "The heavy-duty choice for large-scale irrigation. Our turbines offer unmatched durability and high-volume delivery."
+      desc: "Turbine pumps for deep bore, irrigation and industrial water supply."
     },
     { 
       title: "Industrial Piping", 
       type: "Product", 
       img: industry,
       specs: { materials: "MS, GI, uPVC, PPRC", sizes: "0.5\" to 24\" Diameter", pressure: "PN10, PN16, PN25", standards: "ASTM / DIN / BS" },
-      desc: "High-grade piping solutions for industrial infrastructure. Includes MS/GI for strength and uPVC/PPRC for corrosion-resistance."
+      desc: "Product	Industrial Piping	Piping solutions for industrial water pumping systems."
     },
     { 
       title: "Boring Systems", 
       type: "Service", 
       img: Bore,
       specs: { method: "Rotary Drilling", depth: "Up to 1500ft", casing: "UPVC/Steel", accuracy: "Geologically Surveyed" },
-      desc: "Using advanced drilling rigs and 50+ years of mapping. We guarantee precision boring for stable and high-yield water veins."
+      desc: "Professional water boring services for tube wells and water supply."
     },
     {
       title: "Drilling Machinery", 
       type: "Product", 
       img: Drill,
       specs: { capacity: "2\" to 15\" Dia", maxDepth: "1000 Meters", engine: "Heavy Duty Diesel", mount: "Truck/Crawler" },
-      desc: "Professional-grade borehole drilling machines capable of 2-inch to 15-inch diameter drilling. Built for high torque and rapid penetration in rocky and sandy terrains."
+      desc: "Drilling machinery for water boring and tube well projects."
     },
     { 
       title: "Centrifugal Pumps", 
       type: "Product", 
       img: centrifugal,
       specs: { casing: "Cast Iron", suction: "End Suction", rpm: "2900", sealing: "Mechanical Seal" },
-      desc: "Versatile pumping solutions for industrial liquid transfer, fire fighting, and high-rise building water management."
+      desc: "Centrifugal pumps for industrial, commercial and residential water supply."
     },
     { 
       title: "Residential Solutions", 
       type: "Service", 
       img: residential,
       specs: { system: "Home Boosters", filtration: "Multi-Stage RO", smart: "Auto-Tank Level", pressure: "Constant Flow" },
-      desc: "Tailored water solutions for modern homes. Includes high-pressure booster pumps and advanced purification systems for safe, consistent domestic water."
+      desc: "Water pumping solutions for homes and residential buildings."
     },
     { 
       title: "Electrical Systems", 
       type: "Service", 
       img: electrical,
       specs: { control: "VFD/Soft Starter", protection: "Phase/Dry Run", panel: "IP65 Rated", automation: "IoT Ready" },
-      desc: "Customized control panel manufacturing. We implement advanced electrical protections to ensure your pump motors operate safely."
+      desc: "Electrical and control systems for pumps and pumping installations."
+    }, 
+    { 
+      title: "Solar Energy Systems", 
+      type: "Service", 
+      img: SolarEnergy,
+      specs: { systems: "On-Grid / Off-Grid / Hybrid", panels: "Mono PERC Modules", use: "Home / Farm / Industry", support: "Design & Installation" },
+      desc: "Solar energy systems in Pakistan for homes, farms, and industry. Lower your electricity bills and keep your pumps running."
     }
   ];
 
@@ -111,14 +119,15 @@ const Products = () => {
         <Row className="mb-5 justify-content-center text-center">
           <Col md={10}>
             <h4 className="fw-bold" style={{ color: '#0b4a99', letterSpacing: '3px' }}>OUR CAPABILITIES</h4>
-            <h2 className="display-5 fw-bold text-dark mb-3">Engineered for  <span style={{ color: '#2fd838' }}>Performance</span></h2>
+            <h2 className="display-5 fw-bold text-dark mb-3"> Water Pumps & <span style={{ color: '#2fd838' }}>Pumping Solutions,</span>  Engineered for  <span style={{ color: '#2fd838' }}>Performance</span></h2>
             <div style={{ height: '3px', backgroundColor: '#2fd838', width: '80px', margin: '0 auto' }}></div>
           </Col>
         </Row>
 
-        <Row className="g-4 justify-content-center">
+        <Row className="g-4 ">
           {items.map((item, index) => (
             <Col key={index} lg={4} md={6}>
+ 
               <div 
                 ref={addToCardsRef}
                 className="pre-animate industrial-card"

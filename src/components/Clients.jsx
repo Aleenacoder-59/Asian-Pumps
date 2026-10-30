@@ -76,7 +76,7 @@ const Clients = () => {
           </h2>
           <div className="collab-title-underline mb-3"></div>
           <p className='text-center text-secondary mt-2'>
-            Serving a diverse range of International, Commercial, and Domestic sectors.
+            Asian Pumps has supplied water pumps and pumping solutions to <br /> international, commercial, industrial, agricultural and residential clients across Pakistan since 1974.
           </p>
         </Col>
       </Row>
