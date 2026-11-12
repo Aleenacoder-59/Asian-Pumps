@@ -263,7 +263,9 @@ const Blog = () => {
           {/* Section 4 */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
-              Submersible Pump <span style={{ color: '#2fd838' }}>Price in Pakistan</span>
+             <a href=" https://share.google/FkW9JKVARWDgtvdLO" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                Submersible Pump <span style={{ color: '#2fd838' }}>Price in Pakistan</span>
+              </a>
             </h2>
             <div className="heading-underline mb-4"></div>
             <p className="text-secondary lh-lg">

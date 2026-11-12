@@ -162,9 +162,14 @@ const FifthBlog = () => {
 
           {/* Section 1 */}
           <section className="mb-5">
-            <h2 className="fw-bold text-dark h3 mb-2">
-              Why Solar Water Systems <span style={{ color: '#2fd838' }}>Work So Well in Pakistan</span>
-            </h2>
+           <h2 className="fw-bold text-dark h3 mb-2">
+  <a
+    href="https://asianpumpspk.com/"
+    className="text-dark text-decoration-none"
+  >
+    Why Solar Water Systems <span style={{ color: '#2fd838' }}>Work So Well in Pakistan</span>
+  </a>
+</h2>
             <div className="heading-underline mb-4"></div>
 
             <p className="text-secondary lh-lg">
@@ -317,7 +322,7 @@ const FifthBlog = () => {
             </h2>
             <div className="heading-underline mb-4"></div>
             <p className="text-secondary lh-lg mb-0">
-              Choosing the best solar water system gets easy when you know your water need and pick a seller you trust. <strong>Asian Pumps</strong> gives you matched parts, clear advice, and support after the sale. Call us or visit our website today to book your site check. Let us build a solar setup that gives your home or farm steady water all year.
+              Choosing the best solar water system gets easy when you know your water need and pick a seller you trust. <strong> <a href="https://share.google/FkW9JKVARWDgtvdLO " target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>Asian Pumps</a></strong> gives you matched parts, clear advice, and support after the sale. Call us or visit our website today to book your site check. Let us build a solar setup that gives your home or farm steady water all year.
             </p>
           </section>
 

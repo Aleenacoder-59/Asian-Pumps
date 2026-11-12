@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './components/NotFound.jsx';
@@ -20,6 +21,23 @@ import FifthBlog from './components/FifthBlog.jsx';
 function HomePage() {
   return (
     <>
+      <Helmet>
+        <title>Water Pumps in Pakistan | Manufacturer and Supplier</title>
+        <meta
+          name="description"
+          content="Asian Pumps is a trusted water pumps supplier in Pakistan. Shop submersible, booster and industrial pumps at best prices with fast delivery. Call us today!"
+        />
+        <link rel="canonical" href="https://asianpumpspk.com" />
+
+        {/* Open Graph / Social */}
+        <meta property="og:title" content="Water Pumps in Pakistan | Manufacturer and Supplier" />
+        <meta
+          property="og:description"
+          content="Asian Pumps is a trusted water pumps supplier in Pakistan. Shop submersible, booster and industrial pumps at best prices with fast delivery. Call us today!"
+        />
+        <meta property="og:url" content="https://asianpumpspk.com" />
+      </Helmet>
+
       <About />
       <Product />
       <Support />

@@ -115,9 +115,9 @@ const FourthBlog = () => {
             </h1>
             <div className="heading-underline mx-auto mb-4"></div>
 
-            <p className="text-muted fs-5 lh-base text-start mt-4">
-              <a href="https://asianpumpspk.com/" target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>Turbine pump in Lahore</a> buyers face one big problem: too many choices and too little clear advice. Pick the wrong pump and you waste money, lose water, and pay for repairs every few months. Pick the right one and your farm, factory, or housing society gets steady water for years.
-            </p>
+           <p className="text-muted fs-5 lh-base text-start mt-4">
+  Turbine pump in Lahore buyers face one big problem: too many choices and too little clear advice. Pick the wrong pump and you waste money, lose water, and pay for repairs every few months. Pick the right one and your farm, factory, or housing society gets steady water for years.
+</p>
             <p className="text-muted fs-6 text-start">
               At <strong>Asian Pumps</strong>, we help customers make this choice every day. This guide shares what we want you to know before you buy.
             </p>
@@ -137,7 +137,7 @@ const FourthBlog = () => {
           {/* What Is a Turbine Pump */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
-              What Is a <span style={{ color: '#2fd838' }}>Turbine Pump?</span>
+              <a href="https://asianpumpspk.com/ " target="_blank" rel="noopener noreferrer" className="fw-semibold text-decoration-none" style={{ color: '#1d4ed8' }}>What Is a Turbine Pump?</a>
             </h2>
             <Underline />
             <p className="text-secondary lh-lg">
@@ -232,7 +232,7 @@ const FourthBlog = () => {
           {/* Supplier */}
           <section className="mb-5">
             <h2 className="fw-bold text-dark h3 mb-2">
-              How to Choose a <span style={{ color: '#2fd838' }}>Reliable Supplier</span>
+              How to Choose a <span style={{ color: '#2fd838' }}>  <a href="https://share.google/FkW9JKVARWDgtvdLO " target="_blank" rel="noopener noreferrer" className=" text-decoration-none"  style={{ color: '#2fd838' }}>Reliable Supplier</a></span>
             </h2>
             <Underline />
             <p className="text-secondary lh-lg">

@@ -271,7 +271,9 @@ const ThirdBlog = () => {
 
           {/* Section 6 */}
           <section className="mb-5 p-4 rounded-3 bg-light border">
-            <span className="sub-badge d-block mb-1">Why Choose Us</span>
+<a href="https://share.google/FkW9JKVARWDgtvdLO" className="text-decoration-none">
+  <span className="sub-badge d-block mb-1">Why Choose Us</span>
+</a>
             <h2 className="fw-bold text-dark h3 mb-2">
               Why Choose <span className="text-accent-green">Asian Pumps</span>
             </h2>
