@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import supplierImg from '../assets/Supplier.Jpeg';
+   import supplierImg from '../assets/supplier-blog.jpeg';
 
 const SixthBlog = () => {
   const faqs = [
