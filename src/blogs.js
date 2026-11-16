@@ -3,6 +3,7 @@ import blog2Image from './assets/Centrifugal pumps.jpeg';
 import blog3Image from './assets/Bestpump.jpeg';
 import blog4Image from './assets/TurbinBlog.jpeg';
 import blog5Image from './assets/Solar.jpeg'; 
+import supplierImg from './assets/Supplier.Jpeg';
 export const blogs = [
   {
     id: 1,
@@ -48,5 +49,16 @@ export const blogs = [
     image: blog5Image,
     date: "October 2026",
     readTime: "6 min read"
-  }
+  },
+  {
+    id: 6,
+    slug: 'top-water-pump-suppliers-in-lahore-2026-guide',
+    title: 'What Are The Top 10 Water Pump Suppliers in Lahore (2026 Guide)',
+    excerpt:
+      'Compare the top water pump suppliers in Lahore. See 10 trusted brands, including Asian Pumps, and pick the best pump for your home or farm today.',
+    date: 'November 16, 2026',
+    readTime: '6 min read',
+    category: 'Supplier Guide',
+    image: supplierImg,
+  },
 ];

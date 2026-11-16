@@ -17,7 +17,7 @@ import SecondBlog from './components/SecondBlog.jsx';
 import ThirdBlog from './components/ThirdBlog.jsx';
 import FourthBlog from './components/FourthBlog.jsx';
 import FifthBlog from './components/FifthBlog.jsx';
-
+import SixthBlog from './components/SixthBlog.jsx';
 function HomePage() {
   return (
     <>
@@ -63,7 +63,7 @@ function App() {
           <Route path="/blog/best-water-pumps-in-lahore-2026-buyers-guide" element={<ThirdBlog />} />
           <Route path="/blog/turbine-pump-in-lahore-buying-guide" element={<FourthBlog />} />
           <Route path="/blog/best-solar-water-system-brands-in-pakistan" element={<FifthBlog />} />
-
+<Route path="/blog/top-water-pump-suppliers-in-lahore-2026-guide" element={<SixthBlog />} />
           {/* 404 Route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
