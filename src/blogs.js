@@ -3,7 +3,7 @@ import blog2Image from './assets/Centrifugal pumps.jpeg';
 import blog3Image from './assets/Bestpump.jpeg';
 import blog4Image from './assets/TurbinBlog.jpeg';
 import blog5Image from './assets/Solar.jpeg'; 
-import Blog6Image from './assets/Supplier.Jpeg';
+import Blog6Image from './assets/supplier-blog.jpeg';
 export const blogs = [
   {
     id: 1,
