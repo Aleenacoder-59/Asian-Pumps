@@ -4,6 +4,7 @@ import blog3Image from './assets/Bestpump.jpeg';
 import blog4Image from './assets/TurbinBlog.jpeg';
 import blog5Image from './assets/Solar.jpeg'; 
 import Blog6Image from './assets/supplier-blog.jpeg';
+import dealersImg from './assets/dealers.jpeg';
 export const blogs = [
   {
     id: 1,
@@ -60,5 +61,16 @@ export const blogs = [
     readTime: '6 min read',
     category: 'Supplier Guide',
     image: Blog6Image,
+  },
+  {
+    id: 7,
+    slug: 'water-pump-dealers-in-lahore-2026-guide',
+    title: 'How to Choose the Right Water Pump Dealers in Lahore (2026 Guide)',
+    excerpt:
+      'Looking for water pump dealers in Lahore? Learn how to spot original pumps, check warranty, and pick the right dealer. Trusted advice from Asian Pumps.',
+    date: 'November 2026',
+    readTime: '6 min read',
+    category: "Buyer's Guide",
+    image: dealersImg,
   },
 ];
